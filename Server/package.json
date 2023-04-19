@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "art-gallery-marketplace",
+  "description": "- insert data tables-",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INS140/Art-Gallery-Marketplace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/INS140/Art-Gallery-Marketplace/issues"
+  },
+  "homepage": "https://github.com/INS140/Art-Gallery-Marketplace#readme"
+}
