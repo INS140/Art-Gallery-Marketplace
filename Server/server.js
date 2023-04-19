@@ -2,10 +2,15 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 
-//configuration / middleware
+//configuration and middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
+const PORT = process.env.PORT
+const MONGO_URI = process.env.MONGO_URI
+mongoose.set({strictQuery: true})
+mongoose.connect(MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 
 //controllers and routes
 const artistsController = require('./Controllers/artists_controller')
@@ -26,8 +31,8 @@ app.get('*', (req, res) => {
 })
 
 //listening for connections
-app.listen(process.env.PORT, () => {
-    console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
+app.listen(PORT, () => {
+    console.log(`🎸 Rockin' on port: ${PORT} and ${MONGO_URI}`)
 })
 
 module.exports = app
