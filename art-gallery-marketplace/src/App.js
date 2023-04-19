@@ -1,7 +1,12 @@
-export default function App() {
+import ArtCarousel from "./components/Carousel";
+
+function App() {
   return (
-    <div className="App">
-      <h1>Art-Gallery-Marketplace</h1>
+    <div className="App bg-dark">
+      <h1 className="text-light" style={{textAlign:'center'}}>Art-Mart</h1>
+      <ArtCarousel/>
     </div>
   );
 }
+
+export default App;
