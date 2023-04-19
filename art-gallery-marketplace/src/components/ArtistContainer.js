@@ -6,10 +6,8 @@ import Footer from "./Footer";
 export default function ArtistContainer(){
     return(
         <div>
-            <Navbar/>
             <ArtistView/>
             <CommissionForm/>
-            <Footer/>
         </div>
     )
 }
