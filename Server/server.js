@@ -18,7 +18,7 @@ const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.json({ message: 'Hello World!' })
 })
 
 app.get('*', (req, res) => {
