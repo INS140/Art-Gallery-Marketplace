@@ -5,9 +5,15 @@ const { Schema } = mongoose;
 
 // Schema
 const artworkSchema = new Schema({
-  id: { type: Number },
+  id: { 
+    type: Number
+   },
   title: {
     type: String,
+    required: true
+  },
+  pic: {
+    type: String, 
     required: true
   },
   artist: {
@@ -20,16 +26,19 @@ const artworkSchema = new Schema({
     required: true,
   },
   price: {
-    type: Number, required: true
+    type: Number,
+    required: true
   },
   year: {
     type: Date 
   },
   style: { 
-    type: String, required: true 
+    type: String,
+    required: true 
   },
   size: { 
-    type: text, required: true 
+    type: Text,
+    required: true 
   },
   sold: { 
     Boolean },
@@ -37,7 +46,7 @@ const artworkSchema = new Schema({
     Number, required: true 
   },
     
-}
+})
 
 // Helper Methods
 artworkSchema.methods.getArtworkby = function () {

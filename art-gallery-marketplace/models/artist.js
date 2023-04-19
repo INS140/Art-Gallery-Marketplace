@@ -5,14 +5,18 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 const Artwork = require('./artwork.js')
 const artists = require('./seeders/artist_seed')
-const Artist = require('./models/artist'); 
+// const Artist = require('./models/artist'); 
 
 // Schema
     const artistSchema = new Schema({
         id: {type: Number},
         name: {
             type: String, required: true,            
-            enum: ['Annie', 'Isaac', 'Lorraline', 'Mal', 'Zane']
+        nested: {
+                firstName: { type: String },
+                lastName: { type: String }
+              },
+        enum: ['Annie', 'Isaac', 'Lorraline', 'Mal', 'Zane'],
         },   
         phone_number:{
             type: Text,
@@ -43,12 +47,6 @@ Artist.insertMany(artists)
   .then(() => console.log('Seed data inserted successfully'))
   .catch((err) => console.error(err))
   .finally(() => mongoose.disconnect());
-
-
-
-
-
-
 
     artistSchema.virtual('artworks', {
         ref: Artwork,
