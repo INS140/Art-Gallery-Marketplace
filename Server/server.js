@@ -18,7 +18,11 @@ const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
 
 app.get('/', (req, res) => {
-    res.json('Hello World!')
+    res.send('Hello World!')
+})
+
+app.get('*', (req, res) => {
+    res.send('oopsie!')
 })
 
 //listening for connections
