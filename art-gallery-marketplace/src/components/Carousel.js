@@ -27,7 +27,7 @@ function ArtCarousel() {
   };
 
   return (
-    <Carousel className="mx-auto w-75" activeIndex={index} onSelect={handleSelect}>
+    <Carousel className="mx-auto w-75 p-5" activeIndex={index} onSelect={handleSelect}>
        {data.map((slide, i) => {
         return (
           <Carousel.Item class="carouselItem" interval={5000}>
@@ -39,7 +39,7 @@ function ArtCarousel() {
             <Carousel.Caption>
               {/* make these links to artist page */}
                 <h3>{slide.caption}</h3>
-                <p>{slide.description}</p>
+                <p style={{textAlign:"center"}}>{slide.description}</p>
             </Carousel.Caption>
           </Carousel.Item>
         )

@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={
           <>
             <ArtCarousel/>
-            <AboutUs/>
+            <AboutUs />
           </>
           } />
         <Route path="/images" element={<ArtGallery />} />
