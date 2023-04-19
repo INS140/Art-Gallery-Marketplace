@@ -17,6 +17,10 @@ app.use('/images', imagesController)
 const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
 
+app.get('/', (req, res) => {
+    res.json('Hello World!')
+})
+
 //listening for connections
 app.listen(process.env.PORT, () => {
     console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
