@@ -4,7 +4,7 @@ const images = require("express").Router()
 //FIND ALL IMAGES
 images.get('/', (req, res) => {
     try{
-        console.log({ message: 'Server working'})
+        res.json({ message: 'Server working'})
     }
     catch {
         console.log(err)

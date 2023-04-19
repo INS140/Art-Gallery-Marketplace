@@ -4,7 +4,7 @@ const commissions = require("express").Router()
 //FIND ALL COMMISSIONS
 commissions.get('/', (req, res) => {
     try{
-        console.log({ message: 'Server working'})
+        res.json({ message: 'Server working'})
     }
     catch {
         console.log(err)
