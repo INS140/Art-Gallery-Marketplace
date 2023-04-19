@@ -37,6 +37,7 @@ function ArtCarousel() {
                 alt="slider image"
             />
             <Carousel.Caption>
+              {/* make these links to artist page */}
                 <h3>{slide.caption}</h3>
                 <p>{slide.description}</p>
             </Carousel.Caption>
