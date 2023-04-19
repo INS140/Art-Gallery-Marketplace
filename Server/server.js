@@ -21,3 +21,5 @@ app.use('/commissions', commissionsController)
 app.listen(process.env.PORT, () => {
     console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
 })
+
+module.exports = app
