@@ -5,14 +5,16 @@ const { Schema } = mongoose
 const commissionSchema = new Schema({
     id: { type: String, required: true },
     artist_id: { type: String },
+    title: { type: String },
+    price: { type: Number },
     est_earn: { type: text },
     due_date: { type: Date },
-    total_paid:{type: text},
+    total_paid:{ type: text },
 })
 
 // helper methods 
 commissionSchema.methods.getCommissiondBy = function() {
-    return `Your estimate income are ${this.commission.est_earn}!  since ${this.artist?.startDate()}`
+    return `Your estimate income is ${this.commission.est_earn}!  since ${this.artist?.startDate()}`
 }
   
 

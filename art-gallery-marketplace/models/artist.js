@@ -5,11 +5,13 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 const Artwork = require('./artwork.js')
 const artists = require('./seeders/artist_seed')
-// const Artist = require('./models/artist'); 
+
 
 // Schema
     const artistSchema = new Schema({
-        id: {type: Number},
+        id: {
+        type: Number
+        },
         name: {
             type: String, required: true,            
         nested: {
@@ -42,12 +44,6 @@ const artists = require('./seeders/artist_seed')
     
 mongoose.connect('mongodb://127.0.0.1:27017/Art-Mart', { useNewUrlParser: true });
 
-// insert the seed data
-Artist.insertMany(artists)
-  .then(() => console.log('Seed data inserted successfully'))
-  .catch((err) => console.error(err))
-  .finally(() => mongoose.disconnect());
-
     artistSchema.virtual('artworks', {
         ref: Artwork,
         localField: '_id',
@@ -62,3 +58,16 @@ Artist.insertMany(artists)
     // model and export 
     const Artist = mongoose.model('Artist', artistSchema)
     module.exports = Artist
+
+
+
+
+    
+
+
+
+//     // insert the seed data
+// Artist.insertMany(artists)
+// .then(() => console.log('Seed data inserted successfully'))
+// .catch((err) => console.error(err))
+// .finally(() => mongoose.disconnect());

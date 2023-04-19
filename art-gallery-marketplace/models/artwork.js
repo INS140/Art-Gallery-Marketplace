@@ -37,7 +37,7 @@ const artworkSchema = new Schema({
     required: true 
   },
   size: { 
-    type: Text,
+    type: Number,
     required: true 
   },
   sold: { 
@@ -49,7 +49,7 @@ const artworkSchema = new Schema({
 })
 
 // Helper Methods
-artworkSchema.methods.getArtworkby = function () {
+artworkSchema.methods.getArtworkBy = function () {
   return `This ${this.title} was created by ${this.artist?.name}!`
 };
 
