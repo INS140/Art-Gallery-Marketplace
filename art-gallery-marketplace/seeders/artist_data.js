@@ -1,7 +1,6 @@
-const db = require('../models')
 
 
-db.Artist.create =( [
+module.exports = [
     {
       name: 'Annie',
       image: '',
@@ -42,12 +41,4 @@ db.Artist.create =( [
       style: 'Modern',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
-  ])
-  .then(() => {
-    console.log('Success!')
-    process.exit()
-})
-.catch(err => {
-    console.log('Failure!', err)
-    process.exit()
-})
+  ]
