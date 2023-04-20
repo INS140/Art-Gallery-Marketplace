@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Artist = require('../models/artist');
+const artist = require('../models/artist');
 const ArtistsData = require('./artist_data');
 
 // Connect to the database
@@ -16,7 +16,7 @@ async function seedDatabase() {
     // Delete all existing users in the database
     await Artist.deleteMany();
 
-    // Insert the users data from the seed file
+    // Insert the artists data from the seed file
     const artists = await Artist.insertMany(artistsData);
 
     console.log(`Seeded ${artists.length} artists into the database`);
