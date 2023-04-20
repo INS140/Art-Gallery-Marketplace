@@ -8,17 +8,17 @@ const artworkSchema = new mongoose.Schema({
   _id: { type: Number },
   title: { type: String, required: true },
   pic: { type: String, required: true },
-  artist: { type: Schema.Types.ObjectId,
+  artist: { type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'Artist'
   },
   description:{ type: String, required: true },
   price: { type: Number,   required: true },
   year: { type: Date  },
-  style: { type: String,   required: true },
+  style: { type: String },
   size: { type: Number,   required: true },
   sold: { Boolean },
-  copies: { Number, required: true },
+  copies: { Number },
   })
 
 // Helper Methods

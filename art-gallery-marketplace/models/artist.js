@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // Creating shorthand for the Schema constructor
 const {Schema} = mongoose;
 const Artwork = require('./artwork.js')
-const artists = require('./seeders/artist_seed')
+const Artists = require('./seeders/artist_seed')
 
 
 // Schema
@@ -18,7 +18,9 @@ const artists = require('./seeders/artist_seed')
         image: { type: String, required: true },   
         sytle: { type: String, required: true },
         bio: { type:String, required: true }, 
-        }, {toJSON: { virtuals: true }})
+        createdAt: { type: Date },
+        updateAt: { type: Date }
+    }, {toJSON: { virtuals: true }})
     
 
     artistSchema.virtual('artworks', {
