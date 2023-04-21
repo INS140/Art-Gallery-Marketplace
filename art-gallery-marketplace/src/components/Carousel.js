@@ -20,7 +20,7 @@ const data = [
    },
 ]
 
-function ArtCarousel() {
+export default function ArtCarousel() {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -30,7 +30,7 @@ function ArtCarousel() {
     <Carousel className="mx-auto w-75" activeIndex={index} onSelect={handleSelect}>
        {data.map((slide, i) => {
         return (
-          <Carousel.Item class="carouselItem" interval={5000}>
+          <Carousel.Item className="carouselItem" interval={5000} key={i}>
             <img
                 className="d-block w-100"
                 src={slide.image}
@@ -48,4 +48,3 @@ function ArtCarousel() {
     </Carousel>
   );
 }
-export default ArtCarousel;
