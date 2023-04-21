@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const artist = require('../models/artist');
-const ArtistsData = require('./artist_data');
+const Artist = require('../models/artist');
+const artistsData = require('./artist_data');
 
 // Connect to the database
 mongoose.connect(
