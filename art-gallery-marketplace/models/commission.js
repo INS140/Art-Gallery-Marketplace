@@ -4,7 +4,15 @@ const { Schema } = mongoose
 // schema
 const commissionSchema = new Schema({
     id: { type: String, required: true },
-    artist_id: { type: String },
+    artist: { type: String },
+    artist_id: { type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Artwork'
+      },
+      artwork_id: { type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Artist'
+      },
     title: { type: String },
     price: { type: Number },
     est_earn: { type: text },
