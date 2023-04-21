@@ -2,10 +2,10 @@ import './css/footer.css'
 
 export default function Footer(){
     return(
-       <div class="bg-dark text-secondary">
+       <div className="bg-dark text-secondary">
         <hr></hr>
          <h3>Contributors:</h3>
-         <ul class="list-unstyled">
+         <ul className="list-unstyled">
           <li>Annie Lam</li>
           <li>Isaac Saettel</li>
           <li>Lorraine Ortiz</li>

@@ -24,7 +24,7 @@ function App() {
             <ImageView/>
             <CommissionForm/>
           </>} />
-        <Route path="/artists/:id" element={<ArtistView />} />
+        <Route path="/artists" element={<ArtistView />} />
         </Routes>
       <Footer />
     </div>
