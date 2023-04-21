@@ -2,9 +2,8 @@ import './css/footer.css'
 
 export default function Footer(){
     return(
-      <div class="footer">
+      <div className="footer">
         <p>Authors: Annie, Isaac, Lorraine, Mal, Zane</p>
-        <p>Copyright © 2023 Meta Platforms, Inc.</p>
         <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
           <title>US</title>
           <defs>
@@ -17,7 +16,7 @@ export default function Footer(){
               <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowInnerInner1"></feColorMatrix>
             </filter>
           </defs>
-          <g transform="translate(0 -.004)" fill="none" fill-rule="evenodd">
+          <g transform="translate(0 -.004)" fill="none" fillRule="evenodd">
             <mask id="b" fill="#fff">
               <use href="#a"></use>
             </mask>
@@ -34,8 +33,40 @@ export default function Footer(){
             <use filter="url(#c)" href="#d" fill="#000"></use>
           </g>
         </svg>
-        <span class="wt-display-inline-block wt-vertical-align-middle">&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
-       </div>
-    )
-   }
+        <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
+        <div>                        
+        <span>
+          Copyright © 2023 Meta Platforms, Inc.
+        </span>
+        <ul className="list-inline">
+          <li className="list-unstyled list-inline-item">
+            <a href="">
+              Terms of Use
+            </a>
+          </li>
+          <li className="list-unstyled list-inline-item">
+            <a href="">
+              Privacy
+            </a>
+          </li>
+          <li className="list-unstyled list-inline-item">
+            <a href="">
+              Interest-based ads
+            </a>
+          </li>
+          <li className="list-unstyled list-inline-item">
+            <a href="">
+              Local Shops
+             </a>
+          </li>
+          <li className="list-unstyled list-inline-item">
+            <a href="">
+              Region
+            </a>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  )
+}
    
