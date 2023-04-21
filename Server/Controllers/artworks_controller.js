@@ -1,5 +1,5 @@
 const artworks = require("express").Router()
-const Artwork = require('../models/artwork.js')
+const Artwork = require('../Models/artwork.js')
 
 //FIND ALL ARTWORKS
 artworks.get('/', (req, res) => {

@@ -1,5 +1,5 @@
 const artists = require("express").Router()
-const Artist = require('../models/artist.js')
+const Artist = require('../Models/artist.js')
 const artistSeedData = require('../Seeders/artist_data.js')
 
 //FIND ALL ARTISTS
