@@ -8,7 +8,7 @@ artists.get('/', async (req, res) => {
         const foundArtists = await Artist.find().populate('artworks')
         res.json(foundArtists)
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -33,7 +33,7 @@ artists.get('/:id', async (req, res) => {
             .populate({ path: 'artworks' })
         res.status(200).json(foundArtist)
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -48,7 +48,7 @@ artists.post('/', async (req, res) => {
             data: newArtist
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error' })
     }
@@ -65,7 +65,7 @@ artists.put('/:id', async (req, res) => {
             data: updatedArtist
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -80,7 +80,7 @@ artists.delete('/:id', async (req, res) => {
             data: deletedArtist
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }

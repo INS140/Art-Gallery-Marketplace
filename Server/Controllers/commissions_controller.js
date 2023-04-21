@@ -6,7 +6,7 @@ commissions.get('/', (req, res) => {
     try{
         res.json({ message: 'Server working'})
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -17,7 +17,7 @@ commissions.get('/:id', (req, res) => {
     try {
         console.log({ message: 'Server working'})
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -30,7 +30,7 @@ commissions.post('/', (req, res) => {
             message: 'Successfully insert a new commissions'
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error' })
     }
@@ -43,7 +43,7 @@ commissions.put('/:id', (req, res) => {
             message: 'Successfully updated commissions'
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -56,7 +56,7 @@ commissions.delete('/:id', (req, res) => {
             message: `Successfully deleted commission(s)`
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }

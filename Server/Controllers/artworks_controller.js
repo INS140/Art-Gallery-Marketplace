@@ -6,7 +6,7 @@ artworks.get('/', (req, res) => {
     try{
         res.json({ message: 'Server working'})
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -17,7 +17,7 @@ artworks.get('/:id', (req, res) => {
     try {
         console.log({ message: 'Server working'})
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -30,7 +30,7 @@ artworks.post('/', (req, res) => {
             message: 'Successfully insert a new artworks'
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error' })
     }
@@ -43,7 +43,7 @@ artworks.put('/:id', (req, res) => {
             message: 'Successfully updated artworks'
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
@@ -56,7 +56,7 @@ artworks.delete('/:id', (req, res) => {
             message: `Successfully deleted image(s)`
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
