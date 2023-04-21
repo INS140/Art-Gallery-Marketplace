@@ -5,18 +5,15 @@ const { Schema } = mongoose;
 
 // Schema
 const artworkSchema = new mongoose.Schema({
-  _id: { type: Number },
   title: { type: String, required: true },
   pic: { type: String, required: true },
-  artist: { type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: 'Artist'
-  },
+  artist: { type: String, required: true },
+  artist_id: { type: String, required: true },
   description:{ type: String, required: true },
-  price: { type: Number,   required: true },
+  price: { type: String,   required: true },
   year: { type: Date  },
   style: { type: String },
-  size: { type: Number,   required: true },
+  size: { type: String,   required: true },
   sold: { Boolean },
   copies: { Number },
   })
@@ -26,9 +23,18 @@ artworkSchema.methods.getArtworkBy = function () {
   return `This ${this.title} was created by ${this.artist?.name}!`
 };
 
-
-// model and export 
+// model
 const Artwork = mongoose.model('Artwork', artworkSchema)
+
+// find a specific artwork document by its ID and get its artist_id
+Artwork.findById('ARTWORK_ID')
+  .then((artwork) => {
+    console.log(artwork.artist_id);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
 module.exports = Artwork;
 
 
