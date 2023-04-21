@@ -15,7 +15,6 @@ export default function Footer(){
     <img src='./images/FlagIcon.svg' alt='US' />
     <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
     <div>
-      <span> Copyright © 2023 Meta Platforms, Inc. </span>
       <ul className="list-inline">
         <li className="list-unstyled list-inline-item">
           <a href="#">Terms of Use</a>
