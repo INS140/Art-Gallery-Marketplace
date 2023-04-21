@@ -3,21 +3,19 @@ const { Schema } = mongoose
 
 // schema
 const commissionSchema = new Schema({
-    id: { type: String, required: true },
-    artist: { type: String },
-    artist_id: { type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'Artwork'
-      },
-      artwork_id: { type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'Artist'
-      },
-    title: { type: String },
-    price: { type: Number },
-    est_earn: { type: text },
-    due_date: { type: Date },
-    total_paid:{ type: text },
+    artist_id: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'Artwork'
+    },
+    artwork_id: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'Artist'
+    },
+    title: String,
+    price: Number,
+    due_date: Date,
 })
 
 // helper methods 

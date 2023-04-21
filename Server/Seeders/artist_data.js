@@ -1,5 +1,3 @@
-
-
 module.exports = [
     {
       name: 'Annie',
@@ -18,7 +16,7 @@ module.exports = [
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-      name: 'Lorraline',
+      name: 'Lorraine',
       image: '',
       email: 'bob.johnson@example.com',
       phone: '555-555-5555',

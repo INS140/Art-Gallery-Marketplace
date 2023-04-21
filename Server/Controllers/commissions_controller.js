@@ -1,5 +1,5 @@
 const commissions = require("express").Router()
-//const db = require('../models')
+const Commission = require('../models/commission.js')
 
 //FIND ALL COMMISSIONS
 commissions.get('/', (req, res) => {

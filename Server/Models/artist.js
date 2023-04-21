@@ -1,25 +1,18 @@
-
 // Require mongoose
 const mongoose = require('mongoose');
 // Creating shorthand for the Schema constructor
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 const Artwork = require('./artwork.js')
-const Artists = require('./seeders/artist_seed')
 
 
 // Schema
-    const artistSchema = new mongoose.Schema({
-        _id: { type: Number },
-        name: { type: String, required: true,            
-        enum: ['Annie', 'Isaac', 'Lorraline', 'Mal', 'Zane'],
-        },   
-        phone_number:{ type: Text, required: true },
-        email: { type: Text, required: true },
-        image: { type: String, required: true },   
-        sytle: { type: String, required: true },
-        bio: { type:String, required: true }, 
-        createdAt: { type: Date },
-        updateAt: { type: Date }
+    const artistSchema = new Schema({
+        name: { type: String, required: true },   
+        phone:{ type: String, required: true },
+        email: { type: String, required: true },
+        image: String,   
+        style: { type: String, required: true },
+        bio: { type: String, required: true }
     }, {toJSON: { virtuals: true }})
     
 
@@ -38,16 +31,3 @@ const Artists = require('./seeders/artist_seed')
     // model and export 
     const Artist = mongoose.model('Artist', artistSchema)
     module.exports = Artist
-
-
-
-
-
-
-
-
-//     // insert the seed data
-// Artist.insertMany(artists)
-// .then(() => console.log('Seed data inserted successfully'))
-// .catch((err) => console.error(err))
-// .finally(() => mongoose.disconnect());

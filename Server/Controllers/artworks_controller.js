@@ -1,8 +1,8 @@
-const images = require("express").Router()
-//const db = require('../models')
+const artworks = require("express").Router()
+const Artwork = require('../models/artwork.js')
 
-//FIND ALL IMAGES
-images.get('/', (req, res) => {
+//FIND ALL ARTWORKS
+artworks.get('/', (req, res) => {
     try{
         res.json({ message: 'Server working'})
     }
@@ -12,8 +12,8 @@ images.get('/', (req, res) => {
     }
 })
 
-//FIND SPECIFIC IMAGES
-images.get('/:id', (req, res) => {
+//FIND SPECIFIC ARTWORKS
+artworks.get('/:id', (req, res) => {
     try {
         console.log({ message: 'Server working'})
     }
@@ -23,11 +23,11 @@ images.get('/:id', (req, res) => {
     }
 })
 
-//CREATE IMAGES
-images.post('/', (req, res) => {
+//CREATE ARTWORKS
+artworks.post('/', (req, res) => {
     try {
         res.status(201).json({
-            message: 'Successfully insert a new images'
+            message: 'Successfully insert a new artworks'
         })
     }
     catch {
@@ -36,11 +36,11 @@ images.post('/', (req, res) => {
     }
 })
 
-//UPDATE IMAGES INFORMATION
-images.put('/:id', (req, res) => {
+//UPDATE ARTWORKS INFORMATION
+artworks.put('/:id', (req, res) => {
     try {
         res.status(200).json({ 
-            message: 'Successfully updated images'
+            message: 'Successfully updated artworks'
         })
     }
     catch {
@@ -49,8 +49,8 @@ images.put('/:id', (req, res) => {
     }
 })
 
-//DELETE AN IMAGES
-images.delete('/:id', (req, res) => {
+//DELETE AN artworks
+artworks.delete('/:id', (req, res) => {
     try {
         res.status(200).json({
             message: `Successfully deleted image(s)`
@@ -63,4 +63,4 @@ images.delete('/:id', (req, res) => {
 })
 
 //exports 
-module.exports = images
+module.exports = artworks
