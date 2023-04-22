@@ -13,24 +13,30 @@ export default function CommissionForm() {
     dueDate: ''
   })
 
-  const { post } = useFetch()
+  const { get, post } = useFetch()
 
   const handleChange = e => {
     const { value, name } = e.target
     setInputs({...inputs, [name]: value})
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    const {name, description, dueDate} = e.target
-    /* I have these destructured for ease of use later,
-    but will have to build the submit functionality
-    after the backend is finished. */
-    console.log(name.value, description.value, dueDate.value)
+
+    const {name, title, description, price, dueDate} = e.target
+
+    post('/commissions/', {
+      name: name.value,
+      artist: '64420b0b403305b28b482d7c',
+      title: title.value,
+      description: description.value,
+      price: price.value,
+      dueDate: dueDate.value
+    })
   }
 
   return <div className='form-container'>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method="POST">
         <legend>Request a Commission</legend>
         <Input
           label='Name'

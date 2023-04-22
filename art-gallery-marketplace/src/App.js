@@ -19,6 +19,7 @@ function App() {
         <Route path="/images" element={<ArtGallery />} />
         <Route path="/images/:id" element={<ImageView/>} />
         <Route path="/artists" element={<ArtistView />} />
+        <Route path="/join-us" element={<></>} />
       </Routes>
       <Footer />
     </div>

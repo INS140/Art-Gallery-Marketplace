@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './css/footer.css'
 
 export default function Footer(){
@@ -23,7 +24,7 @@ export default function Footer(){
           <a href="#">Privacy</a>
         </li>
         <li className="list-unstyled list-inline-item">
-          <a href="#">Interest-based ads</a>
+          <Link to="join-us">Join Us</Link>
         </li>
         <li className="list-unstyled list-inline-item">
           <a href="#">Local Shops</a>
