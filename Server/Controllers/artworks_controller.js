@@ -73,7 +73,7 @@ artworks.put('/:id', async (req, res) => {
 })
 
 //DELETE AN artworks
-artworks.delete('/:id', (req, res) => {
+artworks.delete('/:id', async (req, res) => {
     try {
         const deletedArtwork = await Artwork.findByIdAndDelete(req.params.id)
         res.status(200).json({
