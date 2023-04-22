@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 // Creating shorthand for the Schema constructor
 const { Schema } = mongoose;
-const Artwork = require('./artwork.js')
+const Artwork = require('./artwork.js');
+const Commission = require('./commission.js');
 
 
 // Schema
@@ -18,6 +19,12 @@ const Artwork = require('./artwork.js')
 
     artistSchema.virtual('artworks', {
         ref: Artwork,
+        localField: '_id',
+        foreignField: 'artist'
+    })
+
+    artistSchema.virtual('commissions', {
+        ref: Commission,
         localField: '_id',
         foreignField: 'artist'
     })

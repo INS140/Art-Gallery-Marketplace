@@ -21,8 +21,8 @@ try {
 const artistsController = require('./Controllers/artists_controller')
 app.use('/artists', artistsController)
 
-const imagesController = require('./Controllers/artworks_controller')
-app.use('/images', imagesController)
+const artworksController = require('./Controllers/artworks_controller')
+app.use('/artworks', artworksController)
 
 const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
@@ -37,7 +37,7 @@ app.get('*', (req, res) => {
 
 //listening for connections
 app.listen(PORT, () => {
-    console.log(`🎸 Rockin' on port: ${PORT} and ${MONGO_URI}`)
+    console.log(`🎸 Rockin' on port: ${PORT}`)
 })
 
 module.exports = app

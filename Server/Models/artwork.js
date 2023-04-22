@@ -15,7 +15,7 @@ const artworkSchema = new Schema({
   price: { type: Number, required: true },
   year: Date,
   style: String,
-  size: { type: Number, required: true },
+  size: { type: String, required: true },
   sold: Boolean,
   copies: Number,
   })

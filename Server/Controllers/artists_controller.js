@@ -5,7 +5,8 @@ const artistSeedData = require('../Seeders/artist_data.js')
 //FIND ALL ARTISTS
 artists.get('/', async (req, res) => {
     try{
-        const foundArtists = await Artist.find().populate('artworks')
+        const foundArtists = await Artist.find()
+            .populate({ path : 'artworks', options: { limit: 5 } })
         res.json(foundArtists)
     }
     catch (err) {
@@ -30,7 +31,8 @@ artists.get('/seed', async (req, res) => {
 artists.get('/:id', async (req, res) => {
     try {
         const foundArtist = await Artist.findById(req.params.id)
-            .populate({ path: 'artworks' })
+            .populate('artworks')
+            .populate('commissions')
         res.status(200).json(foundArtist)
     }
     catch (err) {

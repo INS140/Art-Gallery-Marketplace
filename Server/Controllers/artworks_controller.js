@@ -5,7 +5,7 @@ const artworkSeedData = require('../Seeders/artwork_data.js')
 //FIND ALL ARTWORKS
 artworks.get('/', async (req, res) => {
     try{
-        const foundArtworks = await artworks.find().populate('artworks')
+        const foundArtworks = await Artwork.find()
         res.json(foundArtworks)
     }
     catch (err) {
@@ -30,9 +30,7 @@ artworks.get('/seed', async (req, res) => {
 artworks.get('/:id', async (req, res) => {
     try {
         const foundArtwork = await Artwork.findById(req.params.id)
-        .populate({ path: 'artworks'})
         res.status(200).json(foundArtwork)
-        console.log({ message: 'Server working'})
     }
     catch (err) {
         console.log(err)
@@ -45,7 +43,7 @@ artworks.post('/', async (req, res) => {
     try {
         const newArtwork = await Artwork.create(req.body)
         res.status(201).json({
-            message: 'Successfully insert a new artworks',
+            message: 'Successfully inserted a new artwork',
             data: newArtwork
         })
     }
@@ -62,8 +60,8 @@ artworks.put('/:id', async (req, res) => {
             new: true
         })
         res.status(200).json({ 
-            message: 'Successfully updated artworks',
-            datat: updatedArtwork
+            message: 'Successfully updated artwork',
+            data: updatedArtwork
         })
     }
     catch (err) {

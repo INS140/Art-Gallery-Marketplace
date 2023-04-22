@@ -3,15 +3,11 @@ const { Schema } = mongoose
 
 // schema
 const commissionSchema = new Schema({
-    artist_id: {
+  name: { type: String, required: true },
+    artist: {
       type: Schema.Types.ObjectId,
       required: true,
       ref: 'Artwork'
-    },
-    artwork_id: {
-      type: Schema.Types.ObjectId,
-      required: true,
-      ref: 'Artist'
     },
     title: String,
     price: Number,

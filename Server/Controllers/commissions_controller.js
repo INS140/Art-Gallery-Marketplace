@@ -5,7 +5,7 @@ const commissionSeedData = require('../Seeders/commission_data.js')
 //FIND ALL COMMISSIONS
 commissions.get('/', async (req, res) => {
     try{
-        const foundCommissions = await commissions.find().populate('commissions')
+        const foundCommissions = await Commission.find()
         res.json(foundCommissions)
     }
     catch (err) {
@@ -30,9 +30,7 @@ commissions.get('/seed', async (req, res) => {
 commissions.get('/:id', async (req, res) => {
     try {
         const foundCommissions = await Commission.findById(req.params.id)
-        .populate({ path: 'commissions'})
         res.status(200).json(foundCommissions)
-        console.log({ message: 'Server working'})
     }
     catch (err) {
         console.log(err)
@@ -72,7 +70,7 @@ commissions.put('/:id', async (req, res) => {
     }
 })
 
-//DELETE AN COMMISSIONS
+//DELETE A COMMISSION
 commissions.delete('/:id', async (req, res) => {
     try {
         const deletedCommission = await Commission.findByIdAndDelete(req.params.id)
