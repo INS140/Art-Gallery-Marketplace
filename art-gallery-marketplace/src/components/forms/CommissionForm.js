@@ -1,14 +1,19 @@
 import { useState } from "react"
-import Input from "./ui-kit/Input"
-import TextArea from "./ui-kit/TextArea"
-import './css/commission-form.css'
+import Input from "../ui-kit/Input"
+import TextArea from "../ui-kit/TextArea"
+import useFetch from "../custom-hooks/useFetch"
+import '../css/commission-form.css'
 
 export default function CommissionForm() {
   const [inputs, setInputs] = useState({
     name: '',
     description: '',
+    title: '',
+    price: 0,
     dueDate: ''
   })
+
+  const { post } = useFetch()
 
   const handleChange = e => {
     const { value, name } = e.target
@@ -34,6 +39,12 @@ export default function CommissionForm() {
           onChange={handleChange}
           required
         />
+        <Input
+          label='Title'
+          name='title'
+          value={inputs.title}
+          onChange={handleChange}
+        />
         <TextArea
           label='Description'
           name='description'
@@ -42,13 +53,22 @@ export default function CommissionForm() {
           required
           rows={5}
         />
-        <Input
-          label='Due Date'
-          type='date'
-          name='dueDate'
-          value={inputs.dueDate}
-          onChange={handleChange}
-        />
+        <fieldset className="double">
+          <Input
+            label='Asking Price'
+            type='number'
+            name='price'
+            value={inputs.price}
+            onChange={handleChange}
+          />
+          <Input
+            label='Due Date'
+            type='date'
+            name='dueDate'
+            value={inputs.dueDate}
+            onChange={handleChange}
+          />
+        </fieldset>
         <button type="submit">Submit</button>
       </form>
   </div>

@@ -4,6 +4,17 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
+//Test CORS
+
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
+
 //configuration and middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
@@ -28,7 +39,7 @@ const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
 
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello World!' })
+    res.status(200).json({ message: 'Welcome to the Art-Mart API!' })
 })
 
 app.get('*', (req, res) => {

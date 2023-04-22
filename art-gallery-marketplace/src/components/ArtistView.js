@@ -1,6 +1,6 @@
 import './css/artistpage.css'
 import ArtCarousel from "./Carousel.js";
-import CommissionForm from './CommissionForm';
+import CommissionForm from './forms/CommissionForm';
 
 export default function ArtistView(artist) {
     return (
