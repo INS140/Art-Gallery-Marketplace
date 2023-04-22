@@ -1,5 +1,6 @@
 const commissions = require("express").Router()
 const Commission = require('../Models/commission.js')
+const commissionSeedData = require('../Seeders/commission_data.js')
 
 //FIND ALL COMMISSIONS
 commissions.get('/', (req, res) => {
@@ -50,10 +51,12 @@ commissions.put('/:id', (req, res) => {
 })
 
 //DELETE AN COMMISSIONS
-commissions.delete('/:id', (req, res) => {
+commissions.delete('/:id', async (req, res) => {
     try {
+        const deletedCommission = await Commission.findByIdAndDelete(req.params.id)
         res.status(200).json({
-            message: `Successfully deleted commission(s)`
+            message: `Successfully deleted commission(s)`,
+            data: deletedCommission
         })
     }
     catch (err) {
