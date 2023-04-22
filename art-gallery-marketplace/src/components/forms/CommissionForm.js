@@ -3,9 +3,10 @@ import Input from "../ui-kit/Input"
 import TextArea from "../ui-kit/TextArea"
 import useFetch from "../custom-hooks/useFetch"
 import '../css/commission-form.css'
+import useFormHandler from "../custom-hooks/useFormHandler"
 
 export default function CommissionForm() {
-  const [inputs, setInputs] = useState({
+  const { inputs, handleChange } = useFormHandler({
     name: '',
     description: '',
     title: '',
@@ -14,11 +15,6 @@ export default function CommissionForm() {
   })
 
   const { get, post } = useFetch()
-
-  const handleChange = e => {
-    const { value, name } = e.target
-    setInputs({...inputs, [name]: value})
-  }
 
   const handleSubmit = async e => {
     e.preventDefault()

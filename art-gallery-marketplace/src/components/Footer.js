@@ -12,7 +12,7 @@ export default function Footer(){
       <li><a href='https://github.com/MalMWare'>Mal Martin</a></li>
       <li><a href='https://www.linkedin.com/in/zmatero/'>Zane Matero</a></li>
     </ul>
-    <p>Copyright © 2023 Art-Mart Platforms, Inc.</p>
+    <p className='left'>Copyright © 2023 Art-Mart Platforms, Inc.</p>
     <img src='./images/FlagIcon.svg' alt='US' />
     <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
     <div>
