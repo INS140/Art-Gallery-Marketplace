@@ -8,7 +8,7 @@ export default function Footer(){
       <li>Annie Lam</li>
       <li>Isaac Saettel</li>
       <li>Lorraine Ortiz</li>
-      <li>Mal Martin</li>
+      <li><a href='https://github.com/MalMWare'>Mal Martin</a></li>
       <li><a href='https://www.linkedin.com/in/zmatero/'>Zane Matero</a></li>
     </ul>
     <p>Copyright © 2023 Art-Mart Platforms, Inc.</p>
