@@ -1,5 +1,5 @@
 export default function useFetch() {
-const baseUrl = 'http://localhost:3002' //'https://art-gallery-marketplace.vercel.app'
+const baseUrl = 'https://art-gallery-marketplace.vercel.app'
 
   return {
     get: async endpoint => {

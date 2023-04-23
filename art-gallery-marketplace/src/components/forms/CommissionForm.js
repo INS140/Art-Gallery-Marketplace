@@ -14,7 +14,7 @@ export default function CommissionForm() {
     dueDate: ''
   })
 
-  const { get, post } = useFetch()
+  const { post } = useFetch()
 
   const handleSubmit = async e => {
     e.preventDefault()

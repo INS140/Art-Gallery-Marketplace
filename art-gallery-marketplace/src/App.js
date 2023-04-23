@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs"
 import ImageView from "./components/ImageView";
 import ArtistView from "./components/ArtistView";
 import JoinUs from "./components/JoinUs";
+import ArtworkForm from "./components/forms/ArtworkForm";
 
 function App() {
   return (
