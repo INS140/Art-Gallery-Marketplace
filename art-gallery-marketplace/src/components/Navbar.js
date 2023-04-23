@@ -15,6 +15,11 @@ export default function MainNav() {
           <li className="nav-item">
             <Link className="nav-link" to="/images">Images</Link>
           </li>
+          <ul className="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
+          <li className="nav-item">
+          <Link className="nav-link navbar-right" to="/cart">Cart</Link>
+          </li>
+          </ul>
         </ul>
       </div>
     </nav>
