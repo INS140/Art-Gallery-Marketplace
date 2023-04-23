@@ -1,4 +1,7 @@
 import './css/footer.css'
+import { AiFillTwitterCircle } from "react-icons/ai"
+import { BsFacebook, BsLinkedin } from "react-icons/bs"
+import { RiInstagramFill } from "react-icons/ri"
 
 export default function Footer(){
   return <div className="bg-dark text-secondary">
@@ -14,6 +17,13 @@ export default function Footer(){
     <p>Copyright © 2023 Art-Mart Platforms, Inc.</p>
     <img src='./images/FlagIcon.svg' alt='US' />
     <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
+    
+    <div className="social">
+      <AiFillTwitterCircle className="icon" />
+      <BsFacebook className="icon" />
+      <RiInstagramFill className="icon" />
+      <BsLinkedin className="icon" />
+    </div>
     <div>
       <ul className="list-inline">
         <li className="list-unstyled list-inline-item">
@@ -36,3 +46,4 @@ export default function Footer(){
   </div>
 }
    
+
