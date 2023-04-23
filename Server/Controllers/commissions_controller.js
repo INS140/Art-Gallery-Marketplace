@@ -1,62 +1,85 @@
 const commissions = require("express").Router()
-//const db = require('../models')
+const Commission = require('../Models/commission.js')
+const commissionSeedData = require('../Seeders/commission_data.js')
 
 //FIND ALL COMMISSIONS
-commissions.get('/', (req, res) => {
+commissions.get('/', async (req, res) => {
     try{
-        res.json({ message: 'Server working'})
+        const foundCommissions = await Commission.find()
+        res.json(foundCommissions)
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
 })
 
-//FIND SPECIFIC COMMISSIONS
-commissions.get('/:id', (req, res) => {
+//SEED DATA
+//will be removed for final implementation
+commissions.get('/seed', async (req, res) => {
     try {
-        console.log({ message: 'Server working'})
+        await Commission.insertMany(commissionSeedData)
+        res.status(201).json({ message: 'Seeded data successfully' })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ message: 'request failed' })
     }
-    catch {
+})
+
+//FIND SPECIFIC COMMISSIONS
+commissions.get('/:id', async (req, res) => {
+    try {
+        const foundCommissions = await Commission.findById(req.params.id)
+        res.status(200).json(foundCommissions)
+    }
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
 })
 
 //CREATE COMMISSIONS
-commissions.post('/', (req, res) => {
+commissions.post('/', async (req, res) => {
     try {
+        const newCommission = await Commission.create(req.body)
         res.status(201).json({
-            message: 'Successfully insert a new commissions'
+            message: 'Successfully insert a new commissions',
+            data: newCommission
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error' })
     }
 })
 
 //UPDATE COMMISSIONS INFORMATION
-commissions.put('/:id', (req, res) => {
+commissions.put('/:id', async (req, res) => {
     try {
+        const updatedCommission = await Commission.findByIdAndUpdate(req.params.id, req.body, {
+            new: true
+        })
         res.status(200).json({ 
-            message: 'Successfully updated commissions'
+            message: 'Successfully updated commissions',
+            data: updatedCommission
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }
 })
 
-//DELETE AN COMMISSIONS
-commissions.delete('/:id', (req, res) => {
+//DELETE A COMMISSION
+commissions.delete('/:id', async (req, res) => {
     try {
+        const deletedCommission = await Commission.findByIdAndDelete(req.params.id)
         res.status(200).json({
-            message: `Successfully deleted commission(s)`
+            message: `Successfully deleted commission(s)`,
+            data: deletedCommission
         })
     }
-    catch {
+    catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error'})
     }

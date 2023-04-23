@@ -10,14 +10,19 @@ app.use(express.urlencoded({ extended: false}))
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
 mongoose.set({strictQuery: true})
-mongoose.connect(MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+try {
+    mongoose.connect(MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+    console.log('DATABASE CONNECTED')
+} catch (err) {
+    console.log(err)
+}
 
 //controllers and routes
 const artistsController = require('./Controllers/artists_controller')
 app.use('/artists', artistsController)
 
-const imagesController = require('./Controllers/images_controller')
-app.use('/images', imagesController)
+const artworksController = require('./Controllers/artworks_controller')
+app.use('/artworks', artworksController)
 
 const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
@@ -27,12 +32,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.send('oopsie!')
+    res.status(404).json({ message: 'endpoint data not found' })
 })
 
 //listening for connections
 app.listen(PORT, () => {
-    console.log(`🎸 Rockin' on port: ${PORT} and ${MONGO_URI}`)
+    console.log(`🎸 Rockin' on port: ${PORT}`)
 })
 
 module.exports = app
