@@ -3,16 +3,60 @@
 ## Our goal
 
 ## Database tables
-
+### Artist Database
 
 | Field | Type |
 | --------- | -------------------- |
-| _id | Number |
 | name | String |
-| phone number | Text |
+| phone | Text |
 | email | Text  |
+| image | String |
 | style | String |
 | bio | String |
+
+### Artist Schemas
+
+#### Artist Schema Artworks
+
+| Field | Type |
+| --------- | -------------------- |
+| ref | Artwork |
+| local_field | _id |
+| foreignField | artist |
+
+#### Commission Schema Artworks
+
+| Field | Type |
+| --------- | -------------------- |
+| ref | Commission |
+| local_field | _id |
+| foreignField | artist |
+
+### Artwork Database
+
+| Field | Type |
+| --------- | -------------------- |
+| title | String |
+| pic | String |
+| artist | Schema.types.ObjectId |
+| description | String |
+| price | Number |
+| year | Date |
+| style | String |
+| size | String |
+| sold | Boolean |
+| copies | Number |
+
+
+### Commission Database
+
+| Field | Type |
+| --------- | -------------------- |
+| name | String |
+| artist | Schema.types.ObjectId |
+| title | String |
+| price | Number |
+| due_date | Date |
 
 ## Views
 
