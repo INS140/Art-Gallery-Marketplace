@@ -4,21 +4,20 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 // Schema
-const artworkSchema = new mongoose.Schema({
-  _id: { type: Number },
+const artworkSchema = new Schema({
   title: { type: String, required: true },
   pic: { type: String, required: true },
-  artist: { type: mongoose.Schema.Types.ObjectId,
+  artist: { type: Schema.Types.ObjectId,
     required: true,
     ref: 'Artist'
   },
   description:{ type: String, required: true },
-  price: { type: Number,   required: true },
-  year: { type: Date  },
-  style: { type: String },
-  size: { type: Number,   required: true },
-  sold: { Boolean },
-  copies: { Number },
+  price: { type: Number, required: true },
+  year: Date,
+  style: String,
+  size: { type: String, required: true },
+  sold: Boolean,
+  copies: Number,
   })
 
 // Helper Methods
@@ -30,5 +29,3 @@ artworkSchema.methods.getArtworkBy = function () {
 // model and export 
 const Artwork = mongoose.model('Artwork', artworkSchema)
 module.exports = Artwork;
-
-
