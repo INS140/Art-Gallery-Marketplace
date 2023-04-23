@@ -1,5 +1,5 @@
 import ArtistView from "./ArtistView";
-import CommissionForm from "./CommissionForm";
+import CommissionForm from "./forms/CommissionForm";
 
 export default function ArtistContainer(){
     return(
