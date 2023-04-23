@@ -1,7 +1,7 @@
 # Art Gallery Marketplace
 
 ## Our goal
-Our vision is to create a full stack application called Art-Mart. Art-Mart was made to bring together both artists and art-lovers to one platform so we can all appreciate one passion. We have provided a platform for artist's to gain exposure and sell their pieces, and for the rest of us to find new tastes and maybe even a new decorative piece for our home! We encourage all artist's to show off their work on our website.
+Our vision is to create a full stack application called Art-Mart. Art-Mart was made to bring together both artists and art-lovers to one platform so we can all appreciate one passion. We have provided a platform for artist's to gain exposure and sell their pieces, and for the rest of us to find new tastes or maybe even a new decorative piece for our home! We encourage all artist's to show off their work on our website.
 
 ## Database tables
 ### Artist Database
@@ -98,3 +98,5 @@ CommissionForm, Footer, JoinUs, ImageView, Navbar
 
 
 ## Our Process
+
+As stated earlier this is a fullstack application. The languages and packages used for the Server (back-end) are Javascript, Express js, Mongoose, Cors, and dotenv. The languages and packages used in the front-end are React, react-router-dom, create-react-app, react-bootstrap, Javascript, CSS, and HTML. The database is MongoDb and Mongo Atlas. Last but not least, Vercel is for deployment. There are two deployments in Vercel. One is for the back-end API and the other is for the front-end. Once both are deployed the front end will interact with the API.
