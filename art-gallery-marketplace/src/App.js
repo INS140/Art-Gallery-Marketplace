@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import ArtCarousel from "./components/Carousel";
 import MainNav from "./components/Navbar";
-import { Routes, Route } from "react-router-dom"
 import ArtGallery from "./components/ArtGallery";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs"
