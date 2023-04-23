@@ -4,12 +4,11 @@
   bottom: 0;
   width: 100%;
   height: 100px;
-  background-color: rgb(160, 45, 45);
   color: white;
   text-align: center;
 }
 
-p {
+.left {
   text-align: left;
   margin-top: auto;
   margin-bottom: auto ;
