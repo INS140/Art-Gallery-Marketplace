@@ -10,6 +10,7 @@ import JoinUs from "./components/JoinUs";
 import ArtworkForm from "./components/forms/ArtworkForm";
 import ArtistGallery from "./components/ArtistGallery";
 import ArtistContainer from "./components/ArtistContainer";
+import CartView from "./components/CartView";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/artists" element={<ArtistGallery />} />
         <Route path="/artists/:id" element={<ArtistContainer/>} />
         <Route path="/join-us" element={<JoinUs />} />
+        <Route path="/cart" element={<CartView />} />
       </Routes>
       <Footer />
     </div>
