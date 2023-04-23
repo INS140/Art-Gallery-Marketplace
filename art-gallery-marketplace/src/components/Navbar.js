@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function mainNav() {
+export default function MainNav() {
   return (
     <nav className="navbar navbar-expand bg-light p-2">
       <Link className="navbar-brand nav-link active" to="/"><img src="https://placekitten.com/50/50" />Art-Mart</Link>
