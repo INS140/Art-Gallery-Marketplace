@@ -4,12 +4,12 @@ export default function mainNav() {
   return (
     <nav className="navbar navbar-expand bg-light p-2">
       <Link className="navbar-brand nav-link active" to="/"><img src="https://placekitten.com/50/50" />Art-Mart</Link>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">        
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">        
         <ul className="navbar-nav">
-          <li class="nav-item">
+          <li className="nav-item">
             <Link className="nav-link" to="/artists">Artists</Link>
           </li>
           <li className="nav-item">

@@ -6,7 +6,7 @@ export default function ArtistGallery(){
         let grid = []
         for (let i = 0; i < 9; i++) {
           grid.push(
-            <ArtistItem />
+            <ArtistItem key={i} />
           )
         }
         return (
@@ -20,7 +20,7 @@ export default function ArtistGallery(){
             <h1 className="text-light" style={{textAlign: "Center"}}>Artists</h1>
             <hr></hr>
             <h3 className="text-secondary">Not an artist? Want to be? Click 
-            <Link to="/join-us" class="btn btn-primary">Here</Link> to make your artist page!</h3>
+            <Link to="/join-us" className="btn btn-primary">Here</Link> to make your artist page!</h3>
             <hr></hr>
             {createGrid()}
         </div>
