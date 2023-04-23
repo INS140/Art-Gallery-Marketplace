@@ -3,7 +3,16 @@
 ## Our goal
 
 ## Database tables
-- insert data tables-
+
+
+| Field | Type |
+| --------- | -------------------- |
+| _id | Number |
+| name | String |
+| phone number | Text |
+| email | Text  |
+| style | String |
+| bio | String |
 
 ## Views
 

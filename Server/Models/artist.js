@@ -16,7 +16,7 @@ const Artists = require('./seeders/artist_seed')
         phone_number:{ type: Text, required: true },
         email: { type: Text, required: true },
         image: { type: String, required: true },   
-        sytle: { type: String, required: true },
+        style: { type: String, required: true },
         bio: { type:String, required: true }, 
         createdAt: { type: Date },
         updateAt: { type: Date }
