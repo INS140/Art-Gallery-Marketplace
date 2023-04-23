@@ -12,7 +12,6 @@ export default function ArtistView(artist) {
             <h3 className="text-light">Commission wage: $500-50,000</h3>        
             <h2 className="text-light">Lorraine's Images</h2>
             <ArtCarousel />
-            <CommissionForm/>
         </div>
     )
 }

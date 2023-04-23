@@ -2,32 +2,31 @@ import React, {useState} from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import '../app.css'
 
-const data = [
-  {
-   image: 'https://placekitten.com/400/200' /* require('./images/image1.jpg') */, 
-   caption:"image 1",
-   description:"Description Here"
-  },
-  {
-    image: 'https://placekitten.com/400/200' /* require('./images/image2.jpg') */, 
-    caption:"image 2",
-    description:"Description Here"
-   },
-   {
-    image: 'https://placekitten.com/400/200' /* require('./images/image3.jpg') */, 
-    caption:"image 3",
-    description:"Description Here"
-   },
-]
-
-export default function ArtCarousel() {
+export default function ArtCarousel(image) {
+  const data = [
+    {
+     image: {image.pic}, 
+     caption: {image.title},
+     description: {image.artist}
+    },
+    {
+      image: {image.pic},
+      caption:{image.title},
+      description:{image.artist}
+     },
+     {
+      image: {image.pic},
+      caption:{image.title},
+      description:{image.artist}
+     },
+  ]
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
   return (
-    <Carousel className="mx-auto w-75 p-5" activeIndex={index} onSelect={handleSelect}>
+    <Carousel className="mx-auto w-75 p-5 shadow p-3 bg-secondary mt-5" activeIndex={index} onSelect={handleSelect}>
        {data.map((slide, i) => {
         return (
           <Carousel.Item className="carouselItem" interval={5000} key={i}>
