@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs"
 import ImageView from "./components/ImageView";
 import ArtistView from "./components/ArtistView";
-import NewArtistForm from "./components/forms/NewArtistForm";
+import JoinUs from "./components/JoinUs";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/images" element={<ArtGallery />} />
         <Route path="/images/:id" element={<ImageView/>} />
         <Route path="/artists" element={<ArtistView />} />
-        <Route path="/join-us" element={<NewArtistForm />} />
+        <Route path="/join-us" element={<JoinUs />} />
       </Routes>
       <Footer />
     </div>

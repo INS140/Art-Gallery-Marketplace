@@ -21,9 +21,9 @@ export default function CommissionForm() {
 
     const {name, title, description, price, dueDate} = e.target
 
-    post('/commissions/', {
+    post('/commissions', {
       name: name.value,
-      artist: '64420b0b403305b28b482d7c',
+      artist: '64420b0b403305b28b482d7b', //needs to be replaced with current page artist id
       title: title.value,
       description: description.value,
       price: price.value,

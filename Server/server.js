@@ -2,6 +2,7 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
+const methodOverride = require('method-override')
 const app = express()
 const mongoose = require('mongoose')
 
@@ -13,6 +14,7 @@ app.use(cors({
 }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
+app.use(methodOverride('_m'))
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
 mongoose.set({strictQuery: true})

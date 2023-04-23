@@ -1,24 +1,52 @@
 export default function useFetch() {
-const baseUrl = 'http://localhost:3002'//'https://art-gallery-marketplace.vercel.app/'
+const baseUrl = 'http://localhost:3002' //'https://art-gallery-marketplace.vercel.app'
 
   return {
     get: async endpoint => {
       try {
-        const res = await fetch(baseUrl + endpoint)
+        const res = await fetch(baseUrl+endpoint)
         return await res.json()
       } catch (err) {
         return err
       }
     },
     post: async (endpoint, body) => {
-      const res = await fetch(baseUrl+endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(body)
-      })
-      return await res.json()
+      try {
+        const res = await fetch(baseUrl+endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(body)
+        })
+        return await res.json()
+      } catch (err) {
+        return err
+      }
+    },
+    put: async (endpoint, body) => {
+      try {
+        const res = await fetch(baseUrl+endpoint, {
+          method: 'PUT',
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(body)
+        })
+        return await res.json()
+      } catch (err) {
+        return err
+      }
+    },
+    delete: async endpoint => {
+      try {
+        const res = await fetch(baseUrl+endpoint, {
+          method: 'DELETE'
+        })
+        return await res.json()
+      } catch (err) {
+        return err
+      }
     }
   }
 }
