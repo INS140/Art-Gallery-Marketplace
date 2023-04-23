@@ -7,10 +7,10 @@ export default function Footer(){
     <h3>Contributors:</h3>
     <ul className="list-unstyled">
       <li>Annie Lam</li>
-      <li>Isaac Saettel</li>
+      <li><a href='https://www.linkedin.com/in/isaac-saettel-110a76262/' target='_blank'>Isaac Saettel</a></li>
       <li>Lorraine Ortiz</li>
-      <li><a href='https://github.com/MalMWare'>Mal Martin</a></li>
-      <li><a href='https://www.linkedin.com/in/zmatero/'>Zane Matero</a></li>
+      <li><a href='https://github.com/MalMWare' target='_blank'>Mal Martin</a></li>
+      <li><a href='https://www.linkedin.com/in/zmatero/' target='_blank'>Zane Matero</a></li>
     </ul>
     <p className='left'>Copyright © 2023 Art-Mart Platforms, Inc.</p>
     <img src='./images/FlagIcon.svg' alt='US' />
