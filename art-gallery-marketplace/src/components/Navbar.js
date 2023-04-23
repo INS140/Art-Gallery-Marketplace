@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import { AiOutlineSearch } from 'react-icons/ai'
+
 
 export default function mainNav() {
   return (
@@ -17,6 +19,10 @@ export default function mainNav() {
           </li>
         </ul>
       </div>
+      <div className="search flex">
+             <AiOutlineSearch className='searchIcon' />
+             <input type='text' placeholder='Search...' />
+             </div>
     </nav>
   )
 }
