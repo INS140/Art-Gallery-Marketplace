@@ -1,6 +1,7 @@
 # Art Gallery Marketplace
 
 ## Our goal
+Our vision is to create a full stack application called Art-Mart. Art-Mart was made to bring together both artists and art-lovers to one platform so we can all appreciate one passion. We have provided a platform for artist's to gain exposure and sell their pieces, and for the rest of us to find new tastes and maybe even a new decorative piece for our home! We encourage all artist's to show off their work on our website.
 
 ## Database tables
 ### Artist Database
@@ -47,7 +48,6 @@
 | sold | Boolean |
 | copies | Number |
 
-
 ### Commission Database
 
 | Field | Type |
@@ -59,6 +59,11 @@
 | due_date | Date |
 
 ## Views
+
+Views components being used to render the front end application: 
+
+AboutUs, ArtGallery, ArtistContainer, ArtistView, Carousel,
+CommissionForm, Footer, JoinUs, ImageView, Navbar
 
 ## Routes
 ### Artist
