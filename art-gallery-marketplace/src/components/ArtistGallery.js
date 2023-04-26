@@ -23,7 +23,9 @@ export default function ArtistGallery(){
       &nbsp; to make your artist page!
     </h3>
     <hr></hr>
-    {data.map(artist => {
-    return <ArtistItem key={artist.id} artist={artist} /> })}
-  </div>
+            <div className="grid-container">
+                {data.map(artist => {
+                return <ArtistItem key={artist.id} artist={artist} /> })}
+            </div>
+        </div>
 }
