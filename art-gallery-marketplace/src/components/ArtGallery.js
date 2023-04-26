@@ -1,6 +1,7 @@
 import ImageView from "./ImageView";
 import useFetch from "./custom-hooks/useFetch";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ArtGallery(){
     const { get } = useFetch()
@@ -14,7 +15,10 @@ export default function ArtGallery(){
 }, [])
     return(
         <div>
-            {data.map(image => <ImageView image={image}/>)}
+            <h1>Art Gallery</h1>
+            <div className="grid-container bg-dark" >
+                {data.map(image => {return <Link to={`/artworks/${image._id}`}><ImageView image={image}/></Link>})}
+            </div>
         </div>
     )
 }

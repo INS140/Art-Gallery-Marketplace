@@ -21,8 +21,10 @@ export default function ArtistGallery(){
             <h3 className="text-secondary">Not an artist? Want to be? Click 
             <Link to="/join-us" className="btn btn-primary">Here</Link> to make your artist page!</h3>
             <hr></hr>
-            {data.map(artist => {
-            return <ArtistItem key={artist.id} artist={artist} /> })}
+            <div className="grid-container">
+                {data.map(artist => {
+                return <ArtistItem key={artist.id} artist={artist} /> })}
+            </div>
         </div>
     )
 }

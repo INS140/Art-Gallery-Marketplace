@@ -22,7 +22,7 @@ export default function ArtistView() {
             <p className="text-light view-para">{data.bio}</p>        
             <h3 className="text-light">{data.style}</h3>        
             <h2 className="text-light">{data.name}'s Images</h2>
-            <ArtCarousel artworks={data.artworks}/>
+            {!data?.artworks?.length ? <div>This artist has not posted any work yet.</div> : <ArtCarousel artworks={data.artworks}/>}
         </div>
     )
 }
