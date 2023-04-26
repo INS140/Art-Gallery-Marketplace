@@ -1,4 +1,5 @@
 import './css/images.css'
+
 export default function ImageView({image}) {
     return (
         <div className='art-container'>
@@ -12,7 +13,6 @@ export default function ImageView({image}) {
             <h5 className="text-light">Price: ${image.price}</h5>        
             <h5 className="text-light">Copies: {image.copies}</h5>        
             <h5 className="text-light">Sold: {image.sold}</h5>      
-
         </div>
     )
 }
