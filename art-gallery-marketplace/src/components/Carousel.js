@@ -2,24 +2,8 @@ import React, { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import '../app.css'
 
-export default function ArtCarousel(image) {
-  const data = [
-    {
-      image: image?.pic,
-      caption: image?.title,
-      description: image?.artist
-    },
-    {
-      image: image?.pic,
-      caption: image?.title,
-      description: image?.artist
-    },
-    {
-      image: image?.pic,
-      caption: image?.title,
-      description: image?.artist
-    },
-  ]
+export default function ArtCarousel({artworks}) {
+
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -27,12 +11,12 @@ export default function ArtCarousel(image) {
 
   return (
     <Carousel className="mx-auto w-75 p-5 shadow p-3 bg-secondary mt-5" activeIndex={index} onSelect={handleSelect}>
-      {data.map((slide, i) => {
+      {artworks.map((slide, i) => {
         return (
           <Carousel.Item className="carouselItem" interval={5000} key={i}>
             <img
               className="d-block w-100"
-              src={slide.image}
+              src={slide.pic}
               alt="slider image"
             />
             <Carousel.Caption>

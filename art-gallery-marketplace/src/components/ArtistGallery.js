@@ -1,21 +1,20 @@
-import ArtistItem from "./ArtistItem"
 import { Link } from "react-router-dom"
+import useFetch from "./custom-hooks/useFetch"
+import { useEffect, useState } from "react"
+import ArtistItem from "./ArtistItem"
 
 export default function ArtistGallery(){
-  const createGrid = () => {
-      let grid = []
-      for (let i = 0; i < 9; i++) {
-        grid.push(
-          <ArtistItem key={i} />
-        )
-      }
-      return (
-        <div>
-          {grid}
-        </div>
-      )
-  }
-  return <div className='m-2'>
+  const { get } = useFetch()
+
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    (async () => {const data = await get('/artists/')
+    setData(data)
+    })()
+  }, [])
+
+  return <div className="m-2">
     <h1 className="text-light" style={{textAlign: "Center"}}>Artists</h1>
     <hr></hr>
     <h3 className="text-secondary">
@@ -24,6 +23,7 @@ export default function ArtistGallery(){
       &nbsp; to make your artist page!
     </h3>
     <hr></hr>
-    {createGrid()}
+    {data.map(artist => {
+    return <ArtistItem key={artist.id} artist={artist} /> })}
   </div>
 }
