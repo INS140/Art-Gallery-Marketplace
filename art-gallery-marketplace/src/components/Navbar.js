@@ -23,9 +23,9 @@ export default function MainNav() {
              <AiOutlineSearch className='searchIcon' />
              <input type='text' placeholder='Search...' />
              </div>
+             </div>
     </nav>
-  )
-}
+  }
 /*
  <nav className="navbar navbar-expand-lg bg-light p-2">
       <Link className="navbar-brand nav-link active" to="/"><img src="https://placekitten.com/50/50" />Art-Mart</Link>
