@@ -1,15 +1,6 @@
 .footer {
-  /* position: fixed; */
-  left: 0;
-  bottom: 0;
-  width: 100%;
   height: 100px;
-  color: white;
   text-align: center;
 }
 
-.left {
-  text-align: left;
-  margin-top: auto;
-  margin-bottom: auto ;
-}
+.left { text-align: left; }

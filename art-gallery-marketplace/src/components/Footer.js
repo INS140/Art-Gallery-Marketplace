@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './css/footer.css'
 
 export default function Footer(){
-  return <div className="bg-dark text-secondary">
+  return <div className="bg-dark text-secondary m-2">
     <hr></hr>
     <h3>Contributors:</h3>
     <ul className="list-unstyled">
@@ -15,7 +15,7 @@ export default function Footer(){
     <p className='left'>Copyright © 2023 Art-Mart Platforms, Inc.</p>
     <img src='./images/FlagIcon.svg' alt='US' />
     <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
-    <div>
+    <div className='py-1'>
       <ul className="list-inline">
         <li className="list-unstyled list-inline-item">
           <a href="#">Terms of Use</a>

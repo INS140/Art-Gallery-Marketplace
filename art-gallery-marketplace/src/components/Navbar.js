@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 
 export default function MainNav() {
-  return (
-    <nav className="navbar navbar-expand bg-light p-2">
+  return <nav className="navbar navbar-expand bg-light p-2">
+    <div className="container-fluid">
       <Link className="navbar-brand nav-link active" to="/"><img src="https://placekitten.com/50/50" />Art-Mart</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">        
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">        
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link className="nav-link" to="/artists">Artists</Link>
@@ -15,15 +15,11 @@ export default function MainNav() {
           <li className="nav-item">
             <Link className="nav-link" to="/images">Images</Link>
           </li>
-          <ul className="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
-          <li className="nav-item">
-          <Link className="nav-link navbar-right" to="/cart">Cart</Link>
-          </li>
-          </ul>
         </ul>
       </div>
-    </nav>
-  )
+      <Link className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">Cart</Link>
+    </div>
+  </nav>
 }
 /*
  <nav className="navbar navbar-expand-lg bg-light p-2">
