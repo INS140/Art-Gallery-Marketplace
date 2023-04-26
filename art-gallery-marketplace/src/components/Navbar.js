@@ -20,8 +20,8 @@ export default function mainNav() {
         </ul>
       </div>
       <div className="search flex">
-             <AiOutlineSearch className='searchIcon' />
-             <input type='text' placeholder='Search...' />
+             <AiOutlineSearch className='searchIcon' style={{colro: "#ccc"}}/>
+             <input type='text' placeholder='Search...' style={{border: "1px solid #ccc" padding:"5px, 20px" }} />
              </div>
     </nav>
   )
