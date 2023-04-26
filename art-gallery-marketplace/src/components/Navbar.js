@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import { AiOutlineSearch } from 'react-icons/ai'
+
 
 export default function MainNav() {
   return <nav className="navbar navbar-expand bg-light p-2">
@@ -17,9 +19,12 @@ export default function MainNav() {
           </li>
         </ul>
       </div>
-      <Link className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">Cart</Link>
-    </div>
-  </nav>
+      <div className="search flex">
+             <AiOutlineSearch className='searchIcon' />
+             <input type='text' placeholder='Search...' />
+             </div>
+    </nav>
+  )
 }
 /*
  <nav className="navbar navbar-expand-lg bg-light p-2">

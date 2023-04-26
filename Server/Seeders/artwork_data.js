@@ -1,6 +1,6 @@
 module.exports = [ {
     title: 'Annie01',
-    pic: 'https://drive.google.com/file/d/1thdydC3cLVpyiXgAm5Djm4bKwpJo47Cm/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2017/06/10/22/58/composing-2391033_960_720.jpg',
     artist: '64420b0b403305b28b482d7a',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 20,
@@ -11,7 +11,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Annie02',
-    pic: 'https://drive.google.com/file/d/14eMvjepIJjprz0hj7eiceQLJ0y6Q_s3z/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2015/06/02/12/59/book-794978_960_720.jpg',
     artist: '64420b0b403305b28b482d7a',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 20,
@@ -22,7 +22,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Annie03',
-    pic: 'https://drive.google.com/file/d/15Rjn64rjE99w43gengTYZGRZZpz7S-Uy/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2012/12/27/19/41/halloween-72939_960_720.jpg',
     artist: '64420b0b403305b28b482d7a',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -33,7 +33,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Isaac01',
-    pic: 'https://drive.google.com/file/d/1_CGj8mv9pZwnQj02-lwX5h5jyX82HPst/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2023/04/14/20/52/lake-7925872_960_720.jpg',
     artist: '64420b0b403305b28b482d7b',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 30,
@@ -44,7 +44,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Isaac02',
-    pic: 'https://drive.google.com/file/d/1V08RhztxA0rxevEsUDItJ-DcO2Gq8UPN/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg',
     artist: '64420b0b403305b28b482d7b',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -55,7 +55,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Isaac03',
-    pic: 'https://drive.google.com/file/d/1SXhh81zTq8IIva0rHeosi4Zwt0Xn_msg/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2023/04/03/11/45/water-7896610_960_720.jpg',
     artist: '64420b0b403305b28b482d7b',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 45,
@@ -66,7 +66,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Lorraline01',
-    pic: 'https://drive.google.com/file/d/1F9Px69jVvIsZwzJVfofQvCQZOJ4cKXsP/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_960_720.jpg',
     artist: '64420b0b403305b28b482d7c',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -77,7 +77,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Lorraline02',
-    pic: 'https://drive.google.com/file/d/1yMIUghyzLNECl4laaam4jeTckiIfbiQW/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2022/11/02/09/43/sand-7564466_960_720.jpg',
     artist: '64420b0b403305b28b482d7c',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -88,7 +88,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Lorraline03',
-    pic: 'https://drive.google.com/file/d/1q8wgj_ecomt9pnnn8vXf0Lr8-myKCV6E/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2022/09/21/17/02/blue-background-7470781_960_720.jpg',
     artist: '64420b0b403305b28b482d7c',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -99,7 +99,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Mal01',
-    pic: 'https://drive.google.com/file/d/1z1OVhmwjl00faZyy6ulX3ZN6sfckeXSr/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2018/04/22/21/30/bird-3342446_960_720.jpg',
     artist: '64420b0b403305b28b482d7d',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -110,7 +110,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Mal02',
-    pic: 'https://drive.google.com/file/d/1d5Q70qZG1G4-F9FtO1V_Ek3q0qsxMmAX/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_960_720.jpg',
     artist: '64420b0b403305b28b482d7d',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -121,7 +121,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Mal03',
-    pic: 'https://drive.google.com/file/d/1aZtNnkMydoS2kGTAgNf2oVwE6jJ9v1Os/view?usp=sharing',
+    pic: 'https://images.pexels.com/photos/1787242/pexels-photo-1787242.jpeg',
     artist: '64420b0b403305b28b482d7d',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -132,7 +132,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Zane01',
-    pic: 'https://drive.google.com/file/d/1uhZ43sCNTUUNpzfK4Vk9-ZgHRSU1JjA_/view?usp=sharing',
+    pic: 'https://www.shutterstock.com/image-illustration/abstract-art-modern-painting-gray-600w-2020717451.jpg',
     artist: '64420b0b403305b28b482d7e',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -143,7 +143,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Zane02',
-    pic: 'https://drive.google.com/file/d/1MHwZDuJZogI_9-qzvASATesMksMKG-05/view?usp=sharing',
+    pic: 'https://www.shutterstock.com/shutterstock/photos/2191099085/display_1500/stock-photo-city-abstract-art-oil-painting-modern-art-canvas-painting-2191099085.jpg',
     artist: '64420b0b403305b28b482d7e',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
@@ -154,7 +154,7 @@ module.exports = [ {
     copies: 1,
 },{
     title: 'Zane03',
-    pic: 'https://drive.google.com/file/d/1-mV4vgvgviCiMGbxtBMpzElxOQJYlFUZ/view?usp=sharing',
+    pic: 'https://cdn.pixabay.com/photo/2014/03/24/17/06/bird-295026_960_720.png',
     artist: '64420b0b403305b28b482d7e',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 40,
