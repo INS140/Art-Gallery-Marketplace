@@ -5,12 +5,16 @@ export default function Footer(){
   return <div className="bg-dark text-secondary">
     <hr></hr>
     <h3>Contributors:</h3>
-    <ul className="list-unstyled">
-      <li>Annie Lam</li>
-      <li><a href='https://www.linkedin.com/in/isaac-saettel-110a76262/' target='_blank'>Isaac Saettel</a></li>
-      <li>Lorraine Ortiz</li>
-      <li><a href='https://github.com/MalMWare' target='_blank'>Mal Martin</a></li>
-      <li><a href='https://www.linkedin.com/in/zmatero/' target='_blank'>Zane Matero</a></li>
+    <ul className="list-inline">
+      <li className="list-unstyled list-inline-item"> Annie Lam </li>
+      | &nbsp;
+      <li className="list-unstyled list-inline-item"><a href='https://www.linkedin.com/in/isaac-saettel-110a76262/' target='_blank'> Isaac Saettel</a></li>
+      | &nbsp;
+      <li className="list-unstyled list-inline-item">Lorraine Ortiz</li>
+      | &nbsp;
+      <li className="list-unstyled list-inline-item"><a href='https://github.com/MalMWare' target='_blank'>Mal Martin</a></li>
+      | &nbsp;
+      <li className="list-unstyled list-inline-item"><a href='https://www.linkedin.com/in/zmatero/' target='_blank'>Zane Matero</a></li>
     </ul>
     <p className='left'>Copyright © 2023 Art-Mart Platforms, Inc.</p>
     <img src='./images/FlagIcon.svg' alt='US' />
@@ -36,4 +40,5 @@ export default function Footer(){
     </div>
   </div>
 }
+   
    
