@@ -18,7 +18,7 @@ export default function Footer(){
     <img src='./images/FlagIcon.svg' alt='US' />
     <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
     
-<div className="social">
+    <div className="social">
       <AiFillTwitterCircle className="icon" style={{padding:"auto", margin: "5px"}} />
       <BsFacebook className="icon" style={{padding:"auto", margin: "5px"}}/>
       <RiInstagramFill className="icon" style={{padding:"auto", margin: "5px"}}/>
