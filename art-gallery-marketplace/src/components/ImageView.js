@@ -1,4 +1,4 @@
-export default function ImageView(image){
+export default function ImageView({image}){
     return(
        <div>
            <img style={{'width':'500px', 'height':'500px'}} src={image.pic} alt="Artist"/>
