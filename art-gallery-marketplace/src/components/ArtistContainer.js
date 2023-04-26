@@ -1,13 +1,30 @@
 import ArtistView from "./ArtistView";
 import CommissionForm from "./forms/CommissionForm";
 import { Link } from "react-router-dom";
+import CommissionGallery from "./CommissionGallery"
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import useFetch from './custom-hooks/useFetch';
 
-export default function ArtistContainer(artist){
+export default function ArtistContainer(){
+    const { get } = useFetch()
+
+    const [data, setData] = useState([])
+
+    const params = useParams()
+    useEffect(() => {
+        (async () => {const data = await get(`/artists/${params.id}`)
+        setData(data)
+    })()
+}, [])
     return(
         <div>
-            <ArtistView key={artist.id} artist={artist}/>
-            <h3 className="text-secondary">Click
-            <Link to="/artwork-form" className="btn btn-primary">Here</Link> to add more artwork to your page!</h3>
+            <ArtistView artist={data}/>
+            <h3 style={{textAlign:"center"}} className="text-secondary mt-3">Click &nbsp;
+            <Link to="/artwork-form" className="btn btn-primary">Here</Link> &nbsp;to add more artwork to your page!</h3>
+            <hr></hr>
+            <h2 style={{textAlign: "center"}}>Artist's Current Commissions:</h2>
+            <CommissionGallery commissions={data.commissions}/>
             <CommissionForm/>
         </div>
     )
