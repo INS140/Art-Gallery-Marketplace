@@ -1,4 +1,3 @@
-import Footer from "./Footer";
 import ImageView from "./ImageView";
 import './css/images.css'
 export default function ArtGallery() {

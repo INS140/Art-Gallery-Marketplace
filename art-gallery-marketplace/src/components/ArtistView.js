@@ -1,7 +1,6 @@
 import './css/artistpage.css'
 import ArtCarousel from "./Carousel.js";
-import CommissionForm from './CommissionForm';
-import Navbar from './Navbar'
+import CommissionForm from './forms/CommissionForm';
 
 export default function ArtistView(artist) {
     return (
@@ -13,7 +12,6 @@ export default function ArtistView(artist) {
             <h3 className="text-light">Commission wage: $500-50,000</h3>        
             <h2 className="text-light">Lorraine's Images</h2>
             <ArtCarousel />
-            <CommissionForm/>
         </div>
     )
 }

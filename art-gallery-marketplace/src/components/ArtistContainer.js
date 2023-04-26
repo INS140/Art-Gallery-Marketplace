@@ -1,7 +1,5 @@
 import ArtistView from "./ArtistView";
-import Navbar from "./Navbar";
-import CommissionForm from "./CommissionForm";
-import Footer from "./Footer";
+import CommissionForm from "./forms/CommissionForm";
 
 export default function ArtistContainer(){
     return(
