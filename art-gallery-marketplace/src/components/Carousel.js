@@ -10,25 +10,22 @@ export default function ArtCarousel({artworks}) {
     setIndex(selectedIndex);
   };
 
-  return (
-    <Carousel className="mx-auto w-75 p-5 shadow p-3 bg-secondary mt-5 rounded-4" activeIndex={index} onSelect={handleSelect}>
-      {artworks.map((slide, i) => {
-        return (
-          <Link to={`/image/${slide.id}`}><Carousel.Item className="carouselItem" interval={5000} key={i}>
-            <img
-              className="d-block w-100"
-              src={slide.pic}
-              alt="slider image"
-            />
-            <Carousel.Caption>
-              {/* make these links to artist page */}
-              <h3>{slide.caption}</h3>
-              <p style={{ textAlign: "center" }}>{slide.description}</p>
-            </Carousel.Caption>
-          </Carousel.Item></Link>
-        )
-      })}
+  return <Carousel className="mx-auto w-75 p-5 shadow p-3 bg-secondary mt-5 rounded-4" activeIndex={index} onSelect={handleSelect}>
+    {artworks.map((slide, i) => {
+      return <Carousel.Item className="carouselItem" interval={5000}>
+        <Link to={`/image/${slide.id}`} key={i}>
+          <img
+            className="d-block w-100"
+            src={slide.pic}
+            alt="slider image"
+          />
+          <Carousel.Caption>
+            <h3>{slide.title}</h3>
+            <p style={{ textAlign: "center" }}>{slide.description}</p>
+          </Carousel.Caption>
+        </Link>
+      </Carousel.Item>
+    })}
 
-    </Carousel>
-  );
+  </Carousel>
 }

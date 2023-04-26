@@ -15,8 +15,8 @@ export default function ArtistContainer(){
     useEffect(() => {
         (async () => {const data = await get(`/artists/${params.id}`)
         setData(data)
-    })()
-}, [])
+        })()
+    }, [])
     return(
         <div>
             <ArtistView artist={data}/>
@@ -26,6 +26,7 @@ export default function ArtistContainer(){
             <h2 style={{textAlign: "center"}}>Artist's Current Commissions:</h2>
             <CommissionGallery commissions={data.commissions}/>
             <CommissionForm/>
+            <Link to={`/artists/update/${params.id}`}><button className="btn btn-light">Update Profile</button></Link>
         </div>
     )
 }

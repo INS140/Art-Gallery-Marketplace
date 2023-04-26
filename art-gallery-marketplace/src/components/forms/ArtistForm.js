@@ -3,17 +3,10 @@ import TextArea from '../ui-kit/TextArea'
 import useFormHandler from '../custom-hooks/useFormHandler'
 import '../css/new-artist-form.css'
 
-export default function NewArtistForm(props) {
-  const { inputs, handleChange } = useFormHandler({
-    name: '',
-    phone: '',
-    email: '',
-    image: '',
-    style: '',
-    bio: ''
-  })
+export default function ArtistForm(props) {
+  const { legend, onSubmit, formInputs } = props
 
-  const { legend, onSubmit } = props
+  const { inputs, handleChange } = useFormHandler(formInputs)
 
   return <div>
     <form onSubmit={onSubmit}>

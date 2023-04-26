@@ -1,14 +1,12 @@
 .grid-container {
     display: grid;
-    grid-template: 1fr / auto auto auto;
+    grid-template: 1fr / repeat(3, 1fr);
     grid-gap: 10px;
-    /* padding: 10px; */
 }
 
 .grid-container>div {
     text-align: center;
     padding: 20px;
-    /* font-size: 30px; */
     position: relative;
     text-align: center;
     color: white;

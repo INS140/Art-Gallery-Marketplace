@@ -10,6 +10,7 @@ import ArtistGallery from "./components/ArtistGallery";
 import ArtistContainer from "./components/ArtistContainer";
 import CartView from "./components/CartView";
 import ArtworkForm from "./components/forms/ArtworkForm";
+import EditArtist from "./components/EditArtist";
 import useFetch from "./components/custom-hooks/useFetch";
 import { useEffect, useState } from "react";
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/join-us" element={<JoinUs />} />
         <Route path="/cart" element={<CartView />} />
         <Route path="/artwork-form" element={<ArtworkForm />} />
+        <Route path="/artists/update/:id" element={<EditArtist />} />
       </Routes>
       <Footer />
     </div>

@@ -25,6 +25,14 @@ export default function JoinUs() {
     <ArtistForm
       legend='New Artist Application'
       onSubmit={handleSubmit}
+      formInputs={{
+        name: '',
+        phone: '',
+        email: '',
+        image: '',
+        style: '',
+        bio: ''
+      }}
     />
   </div>
 }

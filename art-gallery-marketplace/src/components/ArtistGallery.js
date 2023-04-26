@@ -14,9 +14,6 @@ export default function ArtistGallery(){
     })()
   }, [])
   
-  useEffect(() => {
-    console.log(data)
-  }, [data])
   return <div className="m-2">
     <h1 className="text-light" style={{textAlign: "Center"}}>Artists</h1>
     <hr></hr>
@@ -26,9 +23,10 @@ export default function ArtistGallery(){
       &nbsp; to make your artist page!
     </h3>
     <hr></hr>
-            <div className="grid-container">
-                {!data?.length ? <></> : data.map(artist => {
-                return <ArtistItem key={artist.id} artist={artist} /> })}
-            </div>
-        </div>
+      <div className="grid-container">
+        {!data.length
+          ? <>Loading ...</>
+          : data.map(artist => <ArtistItem key={artist.id} artist={artist} />)}
+      </div>
+  </div>
 }

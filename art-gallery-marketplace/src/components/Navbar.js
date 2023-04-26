@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom"
 import { AiOutlineSearch } from 'react-icons/ai'
+import { CartContext } from "./context/CartContext"
+import { useContext } from "react"
 
 
 export default function MainNav() {
+  const { cart } = useContext(CartContext)
+
   return <nav className="navbar navbar-expand bg-light p-2">
     <div className="container-fluid">
       <Link className="navbar-brand nav-link active" to="/"><img width={"27px"} height={"27px"} src="./images/Art-Mart-Favicon-2.jpg" /> Art-Mart</Link>
@@ -23,7 +27,9 @@ export default function MainNav() {
         <AiOutlineSearch className='searchIcon text-dark' />
         <input type='text' placeholder='Search...' />
       </div>
-      <Link className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">Cart</Link>
+      <Link className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">
+        Cart {!cart.length ? '' : `(${cart.reduce((s,i) => s+i.quantity, 0)})`}
+      </Link>
     </div>
   </nav>
 }
