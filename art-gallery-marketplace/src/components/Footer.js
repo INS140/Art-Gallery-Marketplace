@@ -6,11 +6,11 @@ export default function Footer(){
     <hr></hr>
     <h3>Contributors:</h3>
     <ul className="list-inline">
-      <li className="list-unstyled list-inline-item"> Annie Lam </li>
+      <li className="list-unstyled list-inline-item"><a href='https://github.com/annielam0623' target='_blank'> Annie Lam </a></li>
       | &nbsp;
       <li className="list-unstyled list-inline-item"><a href='https://www.linkedin.com/in/isaac-saettel-110a76262/' target='_blank'> Isaac Saettel</a></li>
       | &nbsp;
-      <li className="list-unstyled list-inline-item">Lorraine Ortiz</li>
+      <li className="list-unstyled list-inline-item"><a href='https://github.com/leslieportiz' target='_blank'>Lorraine Ortiz</a></li>
       | &nbsp;
       <li className="list-unstyled list-inline-item"><a href='https://github.com/MalMWare' target='_blank'>Mal Martin</a></li>
       | &nbsp;
