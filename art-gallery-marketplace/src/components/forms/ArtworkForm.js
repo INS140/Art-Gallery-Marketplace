@@ -39,6 +39,7 @@ export default function ArtworkForm(props) {
   // }
 
   return <div>
+    <h1 className='text-secondary' style={{textAlign:"center"}}>Add Artwork</h1>
     <form onSubmit={onSubmit}>
       <legend>{legend}</legend>
       <fieldset className='quad'>

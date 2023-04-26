@@ -1,43 +1,23 @@
 import ImageView from "./ImageView";
-import './css/images.css'
-export default function ArtGallery() {
-    //for loop for each images
-    // for(let x=0;x<image.count;x++){
-    //     return <ImageView/>
-    // }
-    return (
+import useFetch from "./custom-hooks/useFetch";
+import { useEffect, useState } from "react";
+
+export default function ArtGallery(){
+    const { get } = useFetch()
+
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        (async () => {const data = await get(`/artworks/`)
+        setData(data)
+    })()
+}, [])
+    return(
         <div>
             <h1>Art Gallery</h1>
             <div className="grid-container bg-dark" >
-                {/* on click, show image full screen */}
-                
-                <div className="m-5">
-                    <img src='https://placekitten.com/200/200' alt="iamge" />
-                    <div className='centered'>TITLE</div>
-                </div>
-                <div className="m-5">
-                    <img src='https://placekitten.com/200/200' alt="iamge" />
-                    <div className='centered'>TITLE</div>
-                </div>
-                <div className="m-5">
-                    <img src='https://placekitten.com/200/200' alt="iamge" />
-                    <div className='centered'>TITLE</div>
-                </div>
-                <div className="m-5">
-                    <img src='https://placekitten.com/200/200' alt="iamge" />
-                    <div className='centered'>TITLE</div>
-                </div>
-                <div className="m-5">
-                    <img src='https://placekitten.com/200/200' alt="iamge" />
-                    <div className='centered'>TITLE</div>
-                </div>
-                <div className="m-5">
-                    <img src='https://placekitten.com/200/200' alt="iamge" />
-                    <div className='centered'>TITLE</div>
-                </div>
+                {data.map(image => <ImageView image={image}/>)}
             </div>
-            <ImageView/>
-
         </div>
     )
 }
