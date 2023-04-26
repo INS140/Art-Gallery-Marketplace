@@ -12,6 +12,7 @@ import CartView from "./components/CartView";
 import ArtworkForm from "./components/forms/ArtworkForm";
 import useFetch from "./components/custom-hooks/useFetch";
 import { useEffect, useState } from "react";
+import ArtworkView from "./components/ArtworkView";
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
             <AboutUs />
         </>} />
         <Route path="/images" element={<ArtGallery />} />
-        <Route path="/images/:id" element={<ImageView/>} />
+        <Route path="/artworks/:id" element={<ArtworkView/>} />
         <Route path="/artists" element={<ArtistGallery />} />
         <Route path="/artists/:id" element={<ArtistContainer/>} />
         <Route path="/join-us" element={<JoinUs />} />
