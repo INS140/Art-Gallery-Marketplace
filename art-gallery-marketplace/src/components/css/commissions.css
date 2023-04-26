@@ -1,0 +1,6 @@
+.commission_container {
+    overflow-y: scroll;
+    height: 50vh;
+    width: 80vw;
+    margin: auto;
+}

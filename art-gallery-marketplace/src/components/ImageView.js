@@ -1,4 +1,5 @@
 import './css/images.css'
+import { Link } from 'react-router-dom'
 
 export default function ImageView({image}) {
     return (
@@ -12,7 +13,9 @@ export default function ImageView({image}) {
             <h5 className="text-light">Style: {image.style}</h5>        
             <h5 className="text-light">Price: ${image.price}</h5>        
             <h5 className="text-light">Copies: {image.copies}</h5>        
-            <h5 className="text-light">Sold: {image.sold}</h5>      
+            <h5 className="text-light">Sold: {image.sold}</h5>
+            <hr></hr>
+            <Link to="/cart" className="btn btn-primary">Add to cart</Link>  
         </div>
     )
 }
