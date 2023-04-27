@@ -1,6 +1,5 @@
 import Input from "../ui-kit/Input"
 import TextArea from "../ui-kit/TextArea"
-import useFetch from "../custom-hooks/useFetch"
 import '../css/commission-form.css'
 import useFormHandler from "../custom-hooks/useFormHandler"
 
@@ -57,7 +56,7 @@ export default function CommissionForm(props) {
             onChange={handleChange}
           />
         </fieldset>
-        <button type="submit">Submit</button>
+        <button className="btn btn-light" type="submit">Submit</button>
       </form>
   </div>
 }

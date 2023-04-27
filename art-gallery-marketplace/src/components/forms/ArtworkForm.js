@@ -83,7 +83,7 @@ export default function ArtworkForm(props) {
         required
         rows={5}
       />
-      <button type='submit'>Submit</button>
+      <button className="btn btn-light" type='submit'>Submit</button>
     </form>
   </div>
 }
