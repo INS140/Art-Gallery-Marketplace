@@ -1,10 +1,8 @@
 import Input from '../ui-kit/Input'
 import TextArea from '../ui-kit/TextArea'
-import useFormHandler from "../custom-hooks/useFormHandler";
-import useFetch from '../custom-hooks/useFetch';
+import useFormHandler from "../custom-hooks/useFormHandler"
 
 export default function ArtworkForm(props) {
-  const { post } = useFetch()
   const { inputs, handleChange } = useFormHandler({
     title: '',
     pic: '',
@@ -19,24 +17,6 @@ export default function ArtworkForm(props) {
   })
 
   const { legend, onSubmit } = props
-
-  // const handleSubmit = async e => {
-  //   e.preventDefault()
-
-  //   const { title, price, year, style, size, copies, pic, description } = e.target
-
-  //   const data = await post('/artworks', {
-  //     artist: '64420b0b403305b28b482d7b', //change to current artist id
-  //     title: title.value,
-  //     price: price.value,
-  //     year: year.value,
-  //     style: style.value,
-  //     size: size.value,
-  //     copies: copies.value,
-  //     pic: pic.value,
-  //     description: description.value
-  //   })
-  // }
 
   return <div>
     <h1 className='text-secondary' style={{textAlign:"center"}}>Add Artwork</h1>

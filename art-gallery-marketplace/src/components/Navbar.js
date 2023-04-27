@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { AiOutlineSearch } from 'react-icons/ai'
 import { CartContext } from "./context/CartContext"
 import { useContext } from "react"
@@ -7,19 +7,30 @@ import { useContext } from "react"
 export default function MainNav() {
   const { cart } = useContext(CartContext)
 
+  const getClassItem = ({isActive}) => {
+    return `nav-link ${isActive ? 'bg-dark text-light' : ''}`
+  }
+
+  const getClassBrand = ({isActive}) => {
+    return `navbar-brand nav-link ${isActive ? 'bg-dark text-light' : ''}`
+  }
+
   return <nav className="navbar navbar-expand bg-light p-2">
     <div className="container-fluid">
-      <Link className="navbar-brand nav-link active" to="/"><img width={"27px"} height={"27px"} src="./images/Art-Mart-Favicon-2.jpg" /> Art-Mart</Link>
+      <NavLink className={getClassBrand} to="/">
+        <img width={"27px"} height={"27px"} src="./images/Art-Mart-Favicon-2.jpg" />
+        &nbsp; Art-Mart
+      </NavLink>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">        
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/artists">Artists</Link>
+            <NavLink className={getClassItem} to="/artists">Artists</NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/images">Images</Link>
+            <NavLink className={getClassItem} to="/artworks">Artworks</NavLink>
           </li>
         </ul>
       </div>
@@ -27,9 +38,9 @@ export default function MainNav() {
         <AiOutlineSearch className='searchIcon text-dark' />
         <input type='text' placeholder='Search...' />
       </div>
-      <Link className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">
+      <NavLink className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">
         Cart {!cart.length ? '' : `(${cart.reduce((s,i) => s+i.quantity, 0)})`}
-      </Link>
+      </NavLink>
     </div>
   </nav>
 }

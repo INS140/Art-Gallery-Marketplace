@@ -12,8 +12,8 @@ export default function ArtCarousel({artworks}) {
 
   return <Carousel className="mx-auto w-75 p-5 shadow p-3 bg-secondary mt-5 rounded-4" activeIndex={index} onSelect={handleSelect}>
     {artworks.map((slide, i) => {
-      return <Carousel.Item className="carouselItem" interval={5000}>
-        <Link to={`/image/${slide.id}`} key={i}>
+      return <Carousel.Item className="carouselItem" interval={5000} key={i}>
+        <Link to={`/artworks/${slide._id}`}>
           <img
             className="d-block w-100"
             src={slide.pic}

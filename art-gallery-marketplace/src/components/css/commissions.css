@@ -1,6 +1,10 @@
-.commission_container {
-    overflow-y: scroll;
+.commission-card {
     height: 50vh;
-    width: 80vw;
+    width: 80%;
     margin: auto;
+}
+
+.commission-container {
+    overflow-y: scroll;
+    height: 100%;
 }

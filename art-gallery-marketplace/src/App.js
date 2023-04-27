@@ -1,9 +1,7 @@
 import { Routes, Route } from "react-router-dom"
-import ArtCarousel from "./components/Carousel";
 import MainNav from "./components/Navbar";
 import ArtGallery from "./components/ArtGallery";
 import Footer from "./components/Footer";
-import AboutUs from "./components/AboutUs"
 import ImageView from "./components/ImageView";
 import JoinUs from "./components/JoinUs";
 import ArtistGallery from "./components/ArtistGallery";
@@ -11,34 +9,23 @@ import ArtistContainer from "./components/ArtistContainer";
 import CartView from "./components/CartView";
 import ArtworkForm from "./components/forms/ArtworkForm";
 import EditArtist from "./components/EditArtist";
-import useFetch from "./components/custom-hooks/useFetch";
-import { useEffect, useState } from "react";
+import HomeView from "./components/HomeView";
+import EditCommission from "./components/EditCommission";
+import CommissionsView from "./components/CommissionsView";
 
 function App() {
-
-  const {get} = useFetch()
-
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    (async () => {const data = await get(`/artworks/`)
-    setData(data)
-})()
-}, [])
-
-
   return (
     <div className="App bg-dark">
       <MainNav/>
       <Routes>
-        <Route path="/" element={<>
-            <ArtCarousel artworks={data}/>
-            <AboutUs />
-        </>} />
-        <Route path="/images" element={<ArtGallery />} />
-        <Route path="/images/:id" element={<ImageView/>} />
+        <Route path="/" element={<HomeView />} />
+        <Route path="/artworks" element={<ArtGallery />} />
+        <Route path="/artworks/:id" element={<ImageView />} />
         <Route path="/artists" element={<ArtistGallery />} />
-        <Route path="/artists/:id" element={<ArtistContainer/>} />
+        <Route path="/artists/:id/" element={<ArtistContainer/>}>
+          <Route path='' element={<CommissionsView />} />
+          <Route path='commission/update/:commissionId' element={<EditCommission />} />
+        </Route>
         <Route path="/join-us" element={<JoinUs />} />
         <Route path="/cart" element={<CartView />} />
         <Route path="/artwork-form" element={<ArtworkForm />} />
