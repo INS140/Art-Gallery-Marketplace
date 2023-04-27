@@ -13,18 +13,16 @@ import HomeView from "./components/HomeView";
 import EditCommission from "./components/EditCommission";
 import CommissionsView from "./components/CommissionsView";
 import DeleteArtistView from "./components/DeleteArtistView";
+import ArtworkView from "./components/ArtworkView"
 
 function App() {
   return (
     <div className="App bg-dark">
       <MainNav/>
       <Routes>
-        <Route path="/" element={<>
-            <ArtCarousel artworks={data}/>
-            <AboutUs />
-        </>} />
-        <Route path="/images" element={<ArtGallery />} />
-        <Route path="/images/:id" element={<ImageView/>} />
+        <Route path="/" element={<HomeView />} />
+        <Route path="/artworks" element={<ArtGallery />} />
+        <Route path="/artworks/:id" element={<ArtworkView/>} />
         <Route path="/artists" element={<ArtistGallery />} />
         <Route path="/artists/:id/" element={<ArtistContainer/>}>
           <Route path='' element={<CommissionsView />} />

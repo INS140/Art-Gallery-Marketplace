@@ -15,10 +15,9 @@ export default function ArtGallery(){
 }, [])
     return(
         <div>
-            <h1 className="mt-3" style={{textAlign: "center"}}>Art Gallery</h1>
-            <hr></hr>
+            <h1>Art Gallery</h1>
             <div className="grid-container bg-dark" >
-                {data.map(image => <ImageView image={image} key={image._id}/>)}
+                {data.map(image => {return <Link to={`/artworks/${image._id}`}><ImageView image={image}/></Link>})}
             </div>
         </div>
     )
