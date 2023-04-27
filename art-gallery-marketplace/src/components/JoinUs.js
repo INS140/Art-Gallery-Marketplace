@@ -1,15 +1,18 @@
 import ArtistForm from './forms/ArtistForm'
 import useFetch from './custom-hooks/useFetch'
+import { useNavigate } from 'react-router-dom'
 
 export default function JoinUs() {
   const { post } = useFetch()
 
-  const handleSubmit = e => {
+  const navigate = useNavigate()
+
+  const handleSubmit = async e => {
     e.preventDefault()
 
     const { name, phone, email, image, style, bio } = e.target
 
-    post('/artists', {
+    await post('/artists', {
       name: name.value,
       phone: phone.value,
       email: email.value,
@@ -17,6 +20,8 @@ export default function JoinUs() {
       style: style.value,
       bio: bio.value
     })
+
+    navigate('/artists')
   }
 
   return <div className='join-us'>
@@ -25,6 +30,14 @@ export default function JoinUs() {
     <ArtistForm
       legend='New Artist Application'
       onSubmit={handleSubmit}
+      formInputs={{
+        name: '',
+        phone: '',
+        email: '',
+        image: '',
+        style: '',
+        bio: ''
+      }}
     />
   </div>
 }

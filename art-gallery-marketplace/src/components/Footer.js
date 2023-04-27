@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import './css/footer.css'
+import { AiFillTwitterCircle } from "react-icons/ai"
+import { BsFacebook, BsLinkedin } from "react-icons/bs"
+import { RiInstagramFill } from "react-icons/ri"
 
 export default function Footer(){
   return <div className="bg-dark text-secondary m-2">
@@ -20,9 +23,15 @@ export default function Footer(){
     <div className='text-center'>
     <img src='./images/FlagIcon.svg' alt='US' />
     <span>&nbsp; United States &nbsp; | &nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
+    
+    <div className="social">
+      <AiFillTwitterCircle className="icon" style={{padding:"auto", margin: "5px"}} />
+      <BsFacebook className="icon" style={{padding:"auto", margin: "5px"}}/>
+      <RiInstagramFill className="icon" style={{padding:"auto", margin: "5px"}}/>
+      <BsLinkedin className="icon" style={{padding:"auto", margin: "5px"}}/>
     </div>
-    <div className='py-1'>
-      <ul className="list-inline text-center">
+    <div>
+      <ul className="list-inline">
         <li className="list-unstyled list-inline-item">
           <a href="#">Terms of Use</a>
         </li>
@@ -41,6 +50,5 @@ export default function Footer(){
       </ul>
     </div>
   </div>
+  </div>
 }
-   
-   

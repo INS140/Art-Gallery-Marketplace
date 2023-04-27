@@ -25,7 +25,6 @@ artworkSchema.methods.getArtworkBy = function () {
   return `This ${this.title} was created by ${this.artist?.name}!`
 };
 
-
-// model and export 
+// model
 const Artwork = mongoose.model('Artwork', artworkSchema)
 module.exports = Artwork;

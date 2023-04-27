@@ -38,7 +38,7 @@ const baseUrl = 'https://art-gallery-marketplace.vercel.app'
         return err
       }
     },
-    delete: async endpoint => {
+    remove: async endpoint => {
       try {
         const res = await fetch(baseUrl+endpoint, {
           method: 'DELETE'
