@@ -13,6 +13,7 @@ import ArtworkForm from "./components/forms/ArtworkForm";
 import EditArtist from "./components/EditArtist";
 import useFetch from "./components/custom-hooks/useFetch";
 import { useEffect, useState } from "react";
+import DeleteArtistView from "./components/DeleteArtistView";
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
         <Route path="/cart" element={<CartView />} />
         <Route path="/artwork-form" element={<ArtworkForm />} />
         <Route path="/artists/update/:id" element={<EditArtist />} />
+        <Route path="/artists/delete/:id" element={<DeleteArtistView />} />
       </Routes>
       <Footer />
     </div>
