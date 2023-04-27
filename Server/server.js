@@ -1,10 +1,16 @@
 //modules and globals
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
 
 //configuration and middleware
+app.use(cors({
+    origin: '*', 
+    credentials: true,
+    optionSuccessStatus: 200,
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
 const PORT = process.env.PORT
@@ -28,7 +34,7 @@ const commissionsController = require('./Controllers/commissions_controller')
 app.use('/commissions', commissionsController)
 
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello World!' })
+    res.status(200).json({ message: 'Welcome to the Art-Mart API!' })
 })
 
 app.get('*', (req, res) => {

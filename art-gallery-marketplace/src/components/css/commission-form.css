@@ -28,3 +28,10 @@ form {
     display: block;
     width: 100%;
 }
+
+.double {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}

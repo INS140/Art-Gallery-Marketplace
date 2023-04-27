@@ -1,0 +1,26 @@
+.cart-container { min-height: 50vh; }
+
+.cart-item {
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-img-container {
+    width: auto;
+    height: 100%;
+}
+
+.item-img {
+    height: 100%;
+}
+
+.item-details {
+    width: 100%;
+}
+
+.item-description {
+    overflow-y: scroll;
+    width: 100%;
+    border: 1px solid #dee2e6;
+}

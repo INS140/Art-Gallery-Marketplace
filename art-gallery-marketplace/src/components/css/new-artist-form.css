@@ -1,0 +1,11 @@
+.join-us {
+    text-align: center;
+    color: white;
+}
+
+.quad {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
