@@ -26,9 +26,9 @@ export default function ArtistContainer(){
             <h2 style={{textAlign: "center"}}>Artist's Current Commissions:</h2>
             <CommissionGallery commissions={data.commissions}/>
             <CommissionForm/>
-            <div className="text-center">
+            <div className="d-flex justify-content-center gap-3">
                 <Link to={`/artists/update/${params.id}`}>
-                    <button className="btn btn-light">Update Profile</button>
+                    <button className="btn btn-primary">Update Profile</button>
                 </Link>
                 <Link to={`/artists/delete/${params.id}`}>
                     <button className="btn btn-danger">Delete Profile</button>

@@ -16,7 +16,7 @@ export default function DeleteArtistView () {
             <div className="card" style={{width: "50vw", height:"15vh", margin:"auto", marginTop:"35vh"}}>
             <div className="card-body text-center">
                 <h2>Are you sure you want to delete artist?</h2>
-                <div className="text-center">
+                <div className="d-flex justify-content-center gap-5 ">
                     <button className="btn btn-danger" onClick={handleDelete}>Yes</button>
                     <Link to={`/artists/${params.id}`}>
                         <button className="btn btn-light">No</button>

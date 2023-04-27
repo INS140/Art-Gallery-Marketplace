@@ -57,7 +57,7 @@ export default function ArtistForm(props) {
         value={inputs.image}
         onChange={handleChange}
       />
-      <button type='submit'>Submit</button>
+      <button className="btn btn-light" type='submit'>Submit</button>
     </form>
   </div>
 }
