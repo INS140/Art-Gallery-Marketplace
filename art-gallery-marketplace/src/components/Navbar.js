@@ -19,9 +19,9 @@ export default function mainNav() {
           </li>
         </ul>
       </div>
-      <div className="search flex">
-             <AiOutlineSearch className='searchIcon' style={{colro: "#ccc"}}/>
-             <input type='text' placeholder='Search...' style={{border: "1px solid #ccc" padding:"5px, 20px" }} />
+      <div className="search flex"  style={{display: 'inline-block'}}>
+             <AiOutlineSearch className='searchIcon' style={{colro: "#ccc"}} size={20} />
+             <input type='text' placeholder='Search...' style={{border: "1px solid #ccc"}} size={50} />
              </div>
     </nav>
   )
