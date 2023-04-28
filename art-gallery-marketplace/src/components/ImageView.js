@@ -14,13 +14,10 @@ export default function ImageView({image}) {
         })()    
     }, [])
     return (
-        <div className='art-container'>
+        <div className="bg-secondary rounded-4" style={{ width:"30vw", height:"30vh", display:"inline-block", "text-align": "center"}}>
             <h1 className="text-light">{image.title}</h1>        
-            <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto' }} src={image.pic} className='center' alt="Image" />
+            <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto', "height": "20vh" , "width" : "20vh"}} src={image.pic} className='center' alt="Image" />
             <h3 className="text-light">{artist.name}</h3>  
-                {/* image .artist is artist id,  */}
         </div>
     )
 }
-
-//i think zane also wanted me to add add to cart

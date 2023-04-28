@@ -22,6 +22,9 @@
     color: rgb(255, 255, 255);
 }
 
-.art-container {
+  .art-container{
     text-align: center;
+    padding: 30px;
+    width: 50%;
+    height: 90%;
   }
