@@ -19,7 +19,7 @@ export default function ArtCarousel({artworks}) {
             src={slide.pic}
             alt="slider image"
           />
-          <Carousel.Caption>
+          <Carousel.Caption className="w-10 h-10 bg-dark opacity-75 rounded-4">
             <h3>{slide.title}</h3>
             <p style={{ textAlign: "center" }}>{slide.description}</p>
           </Carousel.Caption>
