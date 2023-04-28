@@ -1,46 +1,51 @@
 import './css/images.css'
 import useFetch from './custom-hooks/useFetch';
 import { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { CartContext } from './context/CartContext';
 
 export default function ArtworkView() {
-    const { handleCartAdd } = useContext(CartContext)
-    const { get } = useFetch()
+  const { handleCartAdd } = useContext(CartContext)
+  const { get } = useFetch()
 
-    const [image, setImage] = useState([])
-    const [artist, setArtist] = useState([])
+  const [image, setImage] = useState([])
+  const [artist, setArtist] = useState([])
 
-    const params = useParams()
-    useEffect(() => {
-        (async () => {
-            const image = await get(`/artworks/${params.id}`)
-            setImage(image)
-        })()
-            
-    }, [])
+  const params = useParams()
 
-    useEffect(() => {
-        (async () => {
-            const artist = await get(`/artists/${image.artist}`)
-            setArtist(artist)
-        })()    
-    }, [image])
+  useEffect(() => {
+    (async () => {
+      const image = await get(`/artworks/${params.id}`)
+      setImage(image)
+    })()
+  }, [])
 
-    return (
-        <div className='art-container'>
-            <h1 className="text-light">{image.title}</h1>
-            <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto' }} src={image.pic} className='center' alt="Image" />
-            <p className="text-light view-para">{image.description}</p>
-            <h3 className="text-light">{artist.name}</h3>
-            <h5 className="text-light">Size: {image.size}</h5>
-            <h5 className="text-light">Year: {image.year}</h5>
-            <h5 className="text-light">Style: {image.style}</h5>
-            <h5 className="text-light">Price: ${image.price}</h5>
-            <h5 className="text-light">Copies: {image.copies}</h5>
-            <h5 className="text-light">Sold: {image.sold}</h5>
-            <button className="btn btn-primary" onClick={() => handleCartAdd(image)}>Add to cart</button>
-        </div>
-    )
+  // This could be avoided with some backend changes, works as a temp fix
+  useEffect(() => {
+    (async () => {
+      const artist = await get(`/artists/${image.artist}`)
+      setArtist(artist)
+    })()    
+  }, [image])
+
+  return <div className='art-container'>
+    <h1 className="text-light">{image.title}</h1>
+    <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto' }} src={image.pic} className='center' alt="Image" />
+    <p className="text-light view-para">{image.description}</p>
+    <h3 className="text-light">{artist.name}</h3>
+    <h5 className="text-light">Size: {image.size}</h5>
+    <h5 className="text-light">Year: {image.year}</h5>
+    <h5 className="text-light">Style: {image.style}</h5>
+    <h5 className="text-light">Price: ${image.price}</h5>
+    <h5 className="text-light">Copies: {image.copies}</h5>
+    <h5 className="text-light">Sold: {image.sold}</h5>
+    <button className="btn btn-primary" onClick={() => handleCartAdd(image)}>Add to cart</button>
+    <hr />
+    <div className="d-flex justify-content-center gap-3">
+      <Link to={`/artworks/update/${params.id}`}>
+        <button className="btn btn-primary">Update Profile</button>
+      </Link>
+      <button className="btn btn-danger">Delete Artwork</button>
+    </div>
+  </div>
 }
-

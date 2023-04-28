@@ -13,14 +13,15 @@ export default function ImageView({image}) {
             setArtist(artist)
         })()    
     }, [])
+
     return (
         <div className='art-container'>
             <h1 className="text-light">{image.title}</h1>        
-            <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto' }} src={image.pic} className='center' alt="Image" />
-            <h3 className="text-light">{artist.name}</h3>  
-                {/* image .artist is artist id,  */}
+            <img style={{ margin: 'auto' }} src={image.pic} className='center' alt="Image" />
+            {!artist
+                ? <>Loading ...</>
+                : <h3 className="text-light">{artist.name}</h3>
+            }
         </div>
     )
 }
-
-//i think zane also wanted me to add add to cart

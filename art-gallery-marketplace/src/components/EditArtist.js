@@ -8,11 +8,12 @@ export default function EditArtist() {
 
   const { get, put } = useFetch()
 
-  const [data, setData] = useState({})
+  const [artist, setArtist] = useState({})
 
   useEffect(() => {
-    (async () => {const data = await get(`/artists/${params.id}`)
-    setData(data)
+    (async () => {
+      const data = await get(`/artists/${params.id}`)
+      setArtist(data)
     })()
   }, [])
   
@@ -33,17 +34,17 @@ export default function EditArtist() {
   
   return <div>
     <h1>Update Your Profile</h1>
-    { !data.name
+    { !artist.name
       ? <></>
       : <ArtistForm
         onSubmit={handleSubmit}
         formInputs={{
-          name: data.name,
-          phone: data.phone,
-          email: data.email,
-          image: data.image,
-          style: data.style,
-          bio: data.bio
+          name: artist.name,
+          phone: artist.phone,
+          email: artist.email,
+          image: artist.image,
+          style: artist.style,
+          bio: artist.bio
         }}
       />}
   </div>
