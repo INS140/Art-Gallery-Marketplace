@@ -15,7 +15,7 @@ export default function ImageView({image}) {
     }, [])
 
     return (
-        <div className="bg-secondary rounded-4" style={{ width:"30vw", height:"30vh", display:"inline-block", "text-align": "center"}}>
+        <div className="bg-secondary rounded-4" style={{ width:"30vw", height: '100%', display:"inline-block", "text-align": "center"}}>
             <h1 className="text-light">{image.title}</h1>        
             <img style={{ margin: 'auto' }} src={image.pic} className='center' alt="Image" />
             {!artist

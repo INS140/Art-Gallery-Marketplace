@@ -28,7 +28,7 @@ export default function ArtworkView() {
         })()
     }, [image])
 
-    return (
+    return <div>
         <div className='d-flex'>
             <div className='art-container'>
                 <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto', 'float': 'left', 'height': '100%', 'width': '100%' }} src={image.pic} className='center' alt="Image" />
@@ -45,13 +45,13 @@ export default function ArtworkView() {
                 <h5 className="text-light">Sold: {image.sold}</h5>
                 <button className="btn btn-primary" onClick={() => handleCartAdd(image)}>Add to cart</button>
             </div>
-            <hr />
-            <div className="d-flex justify-content-center gap-3">
-                <Link to={`/artworks/update/${params.id}`}>
-                    <button className="btn btn-primary">Update Profile</button>
-                </Link>
-                <button className="btn btn-danger">Delete Artwork</button>
-            </div>
         </div>
-    )
+        <hr />
+        <div className="d-flex justify-content-center gap-3">
+            <Link to={`/artworks/update/${params.id}`}>
+                <button className="btn btn-primary">Update Profile</button>
+            </Link>
+            <button className="btn btn-danger">Delete Artwork</button>
+        </div>
+    </div>
 }
