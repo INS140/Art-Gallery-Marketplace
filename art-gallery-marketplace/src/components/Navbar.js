@@ -17,7 +17,7 @@ export default function MainNav() {
 
   return <nav className="navbar navbar-expand bg-light p-2">
     <div className="container-fluid">
-      <NavLink style={{width:"8.2vw"}} className={getClassBrand} to="/">
+      <NavLink style={{padding: 'auto 10px'}} className={getClassBrand} to="/">
         <img width={"27px"} height={"27px"} src="./images/Art-Mart-Favicon-2.jpg" />
         &nbsp; Art-Mart
       </NavLink>
