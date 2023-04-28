@@ -19,10 +19,13 @@ export default function ArtistContainer(){
     }, [])
 
     return <div>
-        <ArtistView artist={data}/>
+        {!data
+            ? <>Loading ...</>
+            : <>
+            <ArtistView artist={data}/>
         <h3 style={{textAlign:"center"}} className="text-secondary mt-3">
             Click &nbsp;
-            <Link to="/artwork-form" className="btn btn-primary">Here</Link>
+            <Link to={`/artwork-form/${data._id}`} className="btn btn-primary">Here</Link>
             &nbsp; to add more artwork to your page!
         </h3>
         <hr />
@@ -35,5 +38,7 @@ export default function ArtistContainer(){
                 <button className="btn btn-danger">Delete Profile</button>
             </Link>
         </div>
+            </>
+        }
     </div>
 }

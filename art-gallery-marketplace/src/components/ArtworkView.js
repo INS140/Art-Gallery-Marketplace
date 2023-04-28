@@ -1,7 +1,7 @@
 import './css/images.css'
 import useFetch from './custom-hooks/useFetch';
 import { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { CartContext } from './context/CartContext';
 
 export default function ArtworkView() {
@@ -12,14 +12,15 @@ export default function ArtworkView() {
     const [artist, setArtist] = useState([])
 
     const params = useParams()
+
     useEffect(() => {
         (async () => {
             const image = await get(`/artworks/${params.id}`)
             setImage(image)
         })()
-
     }, [])
 
+    // This could be avoided with some backend changes, works as a temp fix
     useEffect(() => {
         (async () => {
             const artist = await get(`/artists/${image.artist}`)
@@ -30,7 +31,7 @@ export default function ArtworkView() {
     return (
         <div className='d-flex'>
             <div className='art-container'>
-                <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto', 'float': 'left', 'height': '100%','width': '100%' }} src={image.pic} className='center' alt="Image" />
+                <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto', 'float': 'left', 'height': '100%', 'width': '100%' }} src={image.pic} className='center' alt="Image" />
             </div>
             <div className='art-container my-5' >
                 <h1 className="text-light">{image.title}</h1>
@@ -44,8 +45,13 @@ export default function ArtworkView() {
                 <h5 className="text-light">Sold: {image.sold}</h5>
                 <button className="btn btn-primary" onClick={() => handleCartAdd(image)}>Add to cart</button>
             </div>
-
+            <hr />
+            <div className="d-flex justify-content-center gap-3">
+                <Link to={`/artworks/update/${params.id}`}>
+                    <button className="btn btn-primary">Update Profile</button>
+                </Link>
+                <button className="btn btn-danger">Delete Artwork</button>
+            </div>
         </div>
     )
 }
-

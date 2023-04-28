@@ -13,11 +13,15 @@ export default function ImageView({image}) {
             setArtist(artist)
         })()    
     }, [])
+
     return (
         <div className="bg-secondary rounded-4" style={{ width:"30vw", height:"30vh", display:"inline-block", "text-align": "center"}}>
             <h1 className="text-light">{image.title}</h1>        
-            <img style={{ 'marginLeft': 'auto', 'marginRight': 'auto', "height": "20vh" , "width" : "20vh"}} src={image.pic} className='center' alt="Image" />
-            <h3 className="text-light">{artist.name}</h3>  
+            <img style={{ margin: 'auto' }} src={image.pic} className='center' alt="Image" />
+            {!artist
+                ? <>Loading ...</>
+                : <h3 className="text-light">{artist.name}</h3>
+            }
         </div>
     )
 }
