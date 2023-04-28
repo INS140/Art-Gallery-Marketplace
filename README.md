@@ -105,4 +105,4 @@ As stated earlier this is a fullstack application. The languages and packages us
 
 ## Unfinished Functionality
 
-The search bar and the cart do not have functionality. The only thing you can do in the cart is add items to it. There is no checkout. The searchbar has the ability to let you text inside the box but it wont render anything typed. The hyperlinks in the footer besides the Join Us bring you to the top of the page. It doesn't take you to where the hyperlink says.
+The search bar and the cart do not have functionality. The only thing you can do in the cart is add items to it. There is no checkout. The searchbar has the ability to let you text inside the box but it wont render anything typed. The hyperlinks in the footer besides the Join Us bring you to the top of the page. It doesn't take you to where the hyperlink says. The functionality wasn't done because we ran out of time. 
