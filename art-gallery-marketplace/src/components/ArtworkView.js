@@ -1,4 +1,3 @@
-import './css/images.css'
 import useFetch from './custom-hooks/useFetch';
 import { useContext, useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';

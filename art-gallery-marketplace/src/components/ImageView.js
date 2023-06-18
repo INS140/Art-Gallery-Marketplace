@@ -1,4 +1,3 @@
-import './css/images.css'
 import useFetch from './custom-hooks/useFetch';
 import { useEffect, useState } from 'react';
 

@@ -1,0 +1,162 @@
+$cen: center;
+$a: auto;
+$hp: 100%;
+$fp: 50%;
+$bl: block;
+$wh: white;
+
+@mixin flex-gap($display) {
+  display: $display;
+  gap: 10px;
+}
+
+body {
+  min-height: 100vh;
+  color: $wh !important;
+}
+
+nav {
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+}
+
+.artist-container {
+  text-align: $cen;
+}
+
+.center {
+  display: $bl;
+  margin-left: $a;
+  margin-right: $a;
+  width: $fp;
+}
+
+.view-para {
+  text-align: $cen;
+}
+
+.cart-container { min-height: 50vh; }
+
+.cart-item {
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-img-container {
+    width: $a;
+    height: $hp;
+}
+
+.item-img {
+    height: $hp;
+}
+
+.item-details {
+    width: $hp;
+}
+
+.item-description {
+    overflow-y: scroll;
+    width: $hp;
+    border: 1px solid #dee2e6;
+}
+
+form {
+  @include flex-gap(flex);
+
+  text-align: $cen;
+  flex-direction: column;
+  align-items: $cen;
+  width: $fp;
+  margin: $a;
+  color: $wh;
+}
+
+.form-container {
+  width: $hp;
+  padding: 15px 0;
+}
+
+.label {
+  display: $bl;
+  width: $hp;
+  text-align: left;
+}
+
+.required {
+  color: red
+}
+
+.input {
+  display: $bl;
+  width: $hp;
+}
+
+.double {
+  @include flex-gap(flex);
+  
+  justify-content: space-between;
+  width: $hp;
+}
+
+.commission-card {
+  height: 50vh;
+  width: 80%;
+  margin: $a;
+}
+
+.commission-container {
+  overflow-y: scroll;
+  height: $hp;
+}
+
+.footer {
+  height: 100px;
+  text-align: $cen;
+}
+
+.left { text-align: $cen; }
+
+.grid-container {
+  @include flex-gap(grid);
+  
+  grid-template: 1fr / repeat(3, 1fr);
+}
+
+.grid-container>div {
+  text-align: $cen;
+  padding: 20px;
+  position: relative;
+  text-align: $cen;
+  color: $wh;
+}
+
+.centered {
+  position: absolute;
+  top: $fp;
+  left: $fp;
+  transform: translate(-50%, -50%);
+  font-size: medium;
+  color: rgb(255, 255, 255);
+}
+
+.art-container{
+  text-align: $cen;
+  padding: 30px;
+  width: $fp;
+  height: 90%;
+}
+
+.join-us {
+  text-align: $cen;
+  color: $wh;
+}
+
+.quad {
+  @include flex-gap(grid);
+
+  grid: 1fr 1fr / 1fr 1fr;
+  width: $hp;
+}

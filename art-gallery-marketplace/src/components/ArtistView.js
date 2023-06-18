@@ -1,4 +1,3 @@
-import './css/artistpage.css'
 import ArtCarousel from "./Carousel.js";
 
 

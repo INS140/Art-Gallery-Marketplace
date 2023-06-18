@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import './css/footer.css'
 import { AiFillTwitterCircle } from "react-icons/ai"
 import { BsFacebook, BsLinkedin } from "react-icons/bs"
 import { RiInstagramFill } from "react-icons/ri"

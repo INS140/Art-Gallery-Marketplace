@@ -1,5 +1,4 @@
 import CommissionItem from "./CommissionItem"
-import "./css/commissions.css"
 
 export default function CommissionGallery({commissions}) {
     return <div className="p-3 commission-card bg-light rounded-4">
