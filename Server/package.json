@@ -6,7 +6,8 @@
     "mongoose": "^7.0.4"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm i"
   },
   "name": "art-gallery-marketplace",
   "description": "- insert data tables-",
