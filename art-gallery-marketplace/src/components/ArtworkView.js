@@ -1,17 +1,24 @@
 import './css/images.css'
 import useFetch from './custom-hooks/useFetch';
 import { useContext, useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { CartContext } from './context/CartContext';
 
 export default function ArtworkView() {
     const { handleCartAdd } = useContext(CartContext)
-    const { get } = useFetch()
+    const { get, remove } = useFetch()
 
     const [image, setImage] = useState([])
     const [artist, setArtist] = useState([])
 
     const params = useParams()
+
+    const navigate = useNavigate()
+
+    const handleDelete = async () => {
+        await remove(`/artworks/${params.id}`)
+        navigate('/artworks')
+    }
 
     useEffect(() => {
         (async () => {
@@ -51,7 +58,7 @@ export default function ArtworkView() {
             <Link to={`/artworks/update/${params.id}`}>
                 <button className="btn btn-primary">Update Profile</button>
             </Link>
-            <button className="btn btn-danger">Delete Artwork</button>
+            <button className="btn btn-danger" onClick={handleDelete}>Delete Artwork</button>
         </div>
     </div>
 }
